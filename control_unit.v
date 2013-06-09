@@ -61,11 +61,11 @@ module control_unit(
    reg                            memory_op, branch_op, r_type_op, immidiate_op;
 	
 	// interrupt flags
-	reg 									 int_en, int_req;
+	reg 									 int_en;
+	reg 									 int_req;
 	
 	initial begin
       int_en = 1; // interrupts enabled at start  
-      int_req = 0;		
    end
    
 
@@ -264,7 +264,6 @@ module control_unit(
 				 pc_write		= 1; // to the PC
 				 
 				 int_en			= 0; // interrupts are disabled while handling one
-				 int_req 		= 0;
 			 end
           
           default: nextstate = FETCH;
@@ -281,7 +280,11 @@ module control_unit(
 			  if (rst) 
 				 state <= FETCH;
 			  else 
-				 state <= nextstate;
+				begin
+					if (state == INTERRUPT)
+						int_req = 0;
+					state <= nextstate;
+				end
 			end
 		  else // if (int_sig)
 			begin

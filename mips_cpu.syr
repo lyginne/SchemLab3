@@ -1,18 +1,21 @@
-Release 14.4 - xst P.49d (nt64)
+Release 14.5 - xst P.58f (lin64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.06 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.06 secs
  
---> Reading design: mips_cpu.prj
+--> 
+Reading design: mips_cpu.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -2804,12 +2807,13 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 
 
-Total REAL time to Xst completion: 24.00 secs
-Total CPU time to Xst completion: 23.26 secs
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 17.23 secs
  
 --> 
 
-Total memory usage is 317252 kilobytes
+
+Total memory usage is 571980 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings : 2287 (   0 filtered)

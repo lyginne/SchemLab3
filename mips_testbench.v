@@ -8,7 +8,6 @@ module mips_testbench();
 
    initial begin
       clk = 0;
-		int0 = 0;
       forever
         #10 clk = ~clk;              
    end
@@ -22,8 +21,10 @@ module mips_testbench();
 
       rst = 0;
 
-      repeat (1000)
-        @(posedge clk);
+      repeat (1000)				
+			@(posedge clk);
+				
+					
 
       $stop();
       
@@ -35,6 +36,13 @@ module mips_testbench();
            @(posedge clk);
            $display("$t0 (REG8) = %x",dut.datapath_inst.regfile_inst.rf[8]);
         end
+   end
+	
+	initial begin
+	int0=0;
+		repeat(10)
+		  @(posedge clk);
+				int0 = 1;
    end
    
 

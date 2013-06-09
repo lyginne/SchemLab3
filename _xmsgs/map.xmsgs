@@ -5,11 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="Map" num="116" delta="old" >The design is empty.  No processing will be done.
-</msg>
-
-<msg type="user_fatal" file="Map" num="52" delta="old" >Problem encountered processing RPMs.
-</msg>
+<msg type="fatal" file="Map" num="0" delta="new" srcfile="/build/xfndry10/P.58f/env/XOS/Portability/export/Port_Main.h" srcline="159" srcrcs="1.28" >This application has discovered an exceptional condition from which it cannot recover.</msg>
 
 </messages>
 

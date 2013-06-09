@@ -60,11 +60,12 @@ module control_unit(
    // auxiliary signals
    reg                            memory_op, branch_op, r_type_op, immidiate_op;
 	
-	// interrupt enabled flag
-	reg 									 int_en;
+	// interrupt flags
+	reg 									 int_en, int_req;
 	
 	initial begin
-      int_en = 1; // interrupts enabled at start             
+      int_en = 1; // interrupts enabled at start  
+      int_req = 0;		
    end
    
 
@@ -105,7 +106,7 @@ module control_unit(
         case (state)
           // first stage (general for all)
           FETCH: begin
-				 if (int_en & int_sig)
+				 if (int_en & int_req)
 					 begin
 						 nextstate = INTERRUPT;
 						 
@@ -263,6 +264,7 @@ module control_unit(
 				 pc_write		= 1; // to the PC
 				 
 				 int_en			= 0; // interrupts are disabled while handling one
+				 int_req 		= 0;
 			 end
           
           default: nextstate = FETCH;
@@ -272,12 +274,19 @@ module control_unit(
 
    
    // Control FSM state reg
-   always @(posedge clk)
+   always @(posedge clk, posedge int_sig)
      begin
-        if (rst) 
-          state <= FETCH;
-        else 
-          state <= nextstate;
+	     if (clk)
+			begin
+			  if (rst) 
+				 state <= FETCH;
+			  else 
+				 state <= nextstate;
+			end
+		  else // if (int_sig)
+			begin
+				int_req = 1;
+			end
      end
    
 endmodule

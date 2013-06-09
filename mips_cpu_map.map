@@ -1,0 +1,20 @@
+Release 14.5 Map P.58f (lin64)
+Xilinx Map Application Log File for Design 'mips_cpu'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s700an-fgg484-5 -cm area -ir off -pr
+off -c 100 -o mips_cpu_map.ncd mips_cpu.ngd mips_cpu.pcf 
+Target Device  : xc3s700an
+Target Package : fgg484
+Target Speed   : -5
+Mapper Version : spartan3a -- $Revision: 1.55 $
+Mapped Date    : Sun Jun  9 22:20:37 2013
+
+ERROR:Map:116 - The design is empty.  No processing will be done.
+ERROR:Map:52 - Problem encountered processing RPMs. 
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   0

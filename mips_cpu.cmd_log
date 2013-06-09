@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "/home/nik/SchemLab1/mips_cpu.xst" -ofn "/home/nik/SchemLab1/mips_cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-5 mips_cpu.ngc mips_cpu.ngd  
+map -intstyle ise -p xc3s700an-fgg484-5 -cm area -ir off -pr off -c 100 -o mips_cpu_map.ncd mips_cpu.ngd mips_cpu.pcf 
+map -intstyle ise -p xc3s700an-fgg484-5 -cm area -ir off -pr off -c 100 -o mips_cpu_map.ncd mips_cpu.ngd mips_cpu.pcf 
+map -intstyle ise -p xc3s700an-fgg484-5 -cm area -ir off -pr off -c 100 -o mips_cpu_map.ncd mips_cpu.ngd mips_cpu.pcf 
+map -intstyle ise -p xc3s700an-fgg484-5 -cm area -ir off -pr off -c 100 -o mips_cpu_map.ncd mips_cpu.ngd mips_cpu.pcf 
+map -intstyle ise -p xc3s700an-fgg484-5 -cm area -ir off -pr off -c 100 -o mips_cpu_map.ncd mips_cpu.ngd mips_cpu.pcf 
+xst -intstyle ise -ifn "/home/nik/SchemLab1/mips_cpu.xst" -ofn "/home/nik/SchemLab1/mips_cpu.syr" 
+xst -intstyle ise -ifn "/home/nik/SchemLab1/mips_cpu.xst" -ofn "/home/nik/SchemLab1/mips_cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-5 mips_cpu.ngc mips_cpu.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-5 mips_cpu.ngc mips_cpu.ngd  
+map -intstyle ise -p xc3s700an-fgg484-5 -cm area -ir off -pr off -c 100 -o mips_cpu_map.ncd mips_cpu.ngd mips_cpu.pcf 

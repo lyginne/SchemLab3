@@ -1,0 +1,5 @@
+set -tmpdir "/home/nik/SchemLab1/xst/projnav.tmp"
+set -xsthdpdir "/home/nik/SchemLab1/xst"
+elaborate
+-ifn mux5_1.prj
+-ifmt mixed

@@ -10,7 +10,6 @@ module datapath(
                                                  
                 input wire [1:0]  alu_op,        // ALU opcode override
                                   alu_src_b,     // Select second operand source
-                                  pc_source,     // Select PC source
                                   wreg_dst,      // Select destination register addr
                                   wreg_data_sel, // Select data to write in register
                                                                                                           
@@ -24,7 +23,12 @@ module datapath(
                                   alu_src_a,     // Select first operand source
                                   imm_com,       // Command with immidiate operand
                 
-                output wire [5:0] opcode         // opcode for ctrl unit
+                output wire [5:0] opcode,        // opcode for ctrl unit
+					 
+					 input wire 		 int_save_pc,   // Save pc before interrupt
+					 
+                output reg [2:0]  pc_source      // Select PC source
+					 
                 );
    
 
@@ -47,6 +51,9 @@ module datapath(
 
    // regfile output registers
    reg [31:0]            a_reg, b_reg;
+	
+	// PC saving register (while in interrupt)
+	reg [31:0]				 save_pc_reg;
    
 
    wire                  zero;              // Zero signal from ALU
@@ -135,13 +142,15 @@ module datapath(
    
 
    // ****************************************************************************
-   // create a 3-to-1 multiplexor used to select the source of the next PC
+   // create a 5-to-1 multiplexor used to select the source of the next PC
    // ****************************************************************************
-   mux3_1 #( .WIDTH (32) ) 
+   mux5_1 #( .WIDTH (32) ) 
    pc_source_mux(
                  .in0(alu_result_out),                        // Incremented PC 
                  .in1(alu_out_reg),                           // the branch address 
                  .in2({pc_reg[31:28], ir_reg[25:0], 2'b00}),  // Jump target address
+					  .in3(32'h10),                                // Interrupt vector 0x10
+					  .in4(save_pc_reg),                           // restore PC after handling interrupt
                  .sel(pc_source),                             // PC Source selector signal        
                  .out(pc_value)                               // 32-bit output
                  );
@@ -231,7 +240,10 @@ module datapath(
 
              
              if ( pc_write || (pc_write_cond & zero) ) 
-               pc_reg <= pc_value;           
+               pc_reg <= pc_value;
+
+				 if (int_save_pc)
+					save_pc_reg <= pc_reg;
           end
      end
    

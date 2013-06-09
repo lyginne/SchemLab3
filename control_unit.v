@@ -5,7 +5,6 @@ module control_unit(
                                                  
                 output reg [1:0]  alu_op,        // ALU opcode override
                                   alu_src_b,     // Select second operand source
-                                  pc_source,     // Select PC source
                                   wreg_dst,      // Select destination register addr
                                   wreg_data_sel, // Select data to write in register
                                                                                                           
@@ -19,7 +18,13 @@ module control_unit(
                                   alu_src_a,     // Select first operand source
                                   imm_com,       // Command with immidiate operand
                 
-                input  wire [5:0] opcode         // opcode for ctrl unit
+                input  wire [5:0] opcode,        // opcode for ctrl unit
+					 
+					 input  wire 		 int_sig,	    // interrupt signal
+					 
+                output reg [2:0]  pc_source,     // Select PC source
+					 
+					 output reg 		 int_save_pc    // Save PC before interrupt
 
 );
 
@@ -35,7 +40,8 @@ module control_unit(
      ANDI  = 6'b001100, 
      ORI   = 6'b001101, 
      XORI  = 6'b001110, 
-     SLTI  = 6'b001010;     //opcode constants
+     SLTI  = 6'b001010,
+	  RFE	  = 6'b010000;     //opcode constants
    
 
    localparam  // FSM States
@@ -43,7 +49,8 @@ module control_unit(
      DECODE                    = 2, 
      EXECUTION                 = 3, 
      MEM_ACCESS_REG_COMPLETION = 4, 
-     MEM_READ_COMPLETION       = 5;
+     MEM_READ_COMPLETION       = 5,
+	  INTERRUPT						 = 6;
 
 
 
@@ -52,12 +59,19 @@ module control_unit(
 
    // auxiliary signals
    reg                            memory_op, branch_op, r_type_op, immidiate_op;
+	
+	// interrupt enabled flag
+	reg 									 int_en;
+	
+	initial begin
+      int_en = 1; // interrupts enabled at start             
+   end
    
 
    // Combinatorial part of control FSM
    // Generate nextstate code and set control ouputs
    always @(state or opcode)
-     begin
+     begin		  
         //default signal values
         //multiplexers signals or comb logic control
         wreg_data_sel = 'bx;
@@ -90,22 +104,31 @@ module control_unit(
         case (state)
           // first stage (general for all)
           FETCH: begin
-             nextstate = DECODE;
-             
-             ir_write  = 1;   // IR <= Memory[PC]
-             i_or_d    = 0;   // Instructions, for address used PC value
-             mem_read  = 1;
-             
-             // PC <= PC + 4
-             pc_write  = 1;
-             pc_source = 'b00;  // PC source is alu_result_out
-             alu_op    = 'b00;  // add operation
-             alu_src_a = 0;     // alu_a <- PC
-             alu_src_b = 'b01;  // alu_b <- 4
+				 if (int_en & int_sig)
+					 begin
+						 nextstate = INTERRUPT;
+						 
+						 int_save_pc = 1;
+					 end
+				 else
+					 begin
+						 nextstate = DECODE;
+						 
+						 ir_write  = 1;   // IR <= Memory[PC]
+						 i_or_d    = 0;   // Instructions, for address used PC value
+						 mem_read  = 1;
+						 
+						 // PC <= PC + 4
+						 pc_write  = 1;
+						 pc_source = 'b00;  // PC source is alu_result_out
+						 alu_op    = 'b00;  // add operation
+						 alu_src_a = 0;     // alu_a <- PC
+						 alu_src_b = 'b01;  // alu_b <- 4
+					 end
           end
           
           // second stage (general for all)
-          DECODE: begin
+          DECODE: begin 
              nextstate = EXECUTION;
              /* A <= Reg [IR[25:21]] and B <= Reg [IR[20:16]] */
              
@@ -170,6 +193,16 @@ module control_unit(
                   alu_src_a = 1;    // alu_a <- A
                   alu_src_b = 'b10; // alu_b <- sign-extend immediate (IR[15:0])
                end
+					
+				 else if (RFE)
+					 begin
+						nextstate = FETCH;
+						
+						pc_source = 'b100; // write saved before interrupt handling PC value
+						pc_write = 1; // to the PC
+						
+						int_en = 1; // enable interrupts
+					 end
              else nextstate = FETCH; // non-valid opcode
              
           end
@@ -221,6 +254,15 @@ module control_unit(
              wreg_dst      = 'b00; // write reg number defined by rt field (IR[20:16])
              wreg_data_sel = 'b01; // MDR value on WriteData lines of RegFile
           end
+			 
+			 INTERRUPT: begin
+				 nextstate     = FETCH;
+				 
+				 pc_source 		= 'b11; // write interrupt vector address
+				 pc_write		= 1; // to the PC
+				 
+				 int_en			= 0; // interrupts are disabled while handling one
+			 end
           
           default: nextstate = FETCH;
         endcase

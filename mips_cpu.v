@@ -1,7 +1,8 @@
 module mips_cpu
   (
    input clk,
-   input rst   
+   input rst,
+	input int0
    );
 
 
@@ -20,7 +21,8 @@ module mips_cpu
 	    pc_write,
 	    pc_write_cond,
 	    alu_src_a,
-	    imm_com;
+	    imm_com,
+		 int_save_pc;
 
    wire [5:0] opcode;
    
@@ -42,7 +44,9 @@ module mips_cpu
 			    .pc_write_cond(pc_write_cond),
 			    .alu_src_a    (alu_src_a),
 			    .imm_com      (imm_com),
-			    .opcode       (opcode)
+			    .opcode       (opcode),
+				 .int_sig		(int0),
+				 .int_save_pc  (int_save_pc)
 			    );
    
 
@@ -63,7 +67,8 @@ module mips_cpu
 			   .pc_write_cond(pc_write_cond), 
 			   .alu_src_a(alu_src_a),	  
 			   .imm_com(imm_com),	  
-			   .opcode(opcode)	       
+			   .opcode(opcode),
+				.int_save_pc(int_save_pc)
 			   );
    
 

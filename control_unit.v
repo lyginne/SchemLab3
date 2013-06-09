@@ -194,7 +194,7 @@ module control_unit(
                   alu_src_b = 'b10; // alu_b <- sign-extend immediate (IR[15:0])
                end
 					
-				 else if (RFE)
+				 else if (opcode == RFE)
 					 begin
 						nextstate = FETCH;
 						

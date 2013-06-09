@@ -90,6 +90,7 @@ module control_unit(
         reg_write     = 0;
         pc_write      = 0;
         pc_write_cond = 0;
+		  int_save_pc	 = 0;
         
         //aux singals
         memory_op    = ( (opcode == LW) | ( opcode == SW) );
@@ -119,8 +120,8 @@ module control_unit(
 						 mem_read  = 1;
 						 
 						 // PC <= PC + 4
-						 pc_write  = 1;
 						 pc_source = 'b00;  // PC source is alu_result_out
+						 pc_write  = 1;
 						 alu_op    = 'b00;  // add operation
 						 alu_src_a = 0;     // alu_a <- PC
 						 alu_src_b = 'b01;  // alu_b <- 4

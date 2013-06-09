@@ -27,7 +27,7 @@ module datapath(
 					 
 					 input wire 		 int_save_pc,   // Save pc before interrupt
 					 
-                output reg [2:0]  pc_source      // Select PC source
+                input wire [2:0]  pc_source      // Select PC source
 					 
                 );
    

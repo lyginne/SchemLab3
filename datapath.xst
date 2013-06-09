@@ -1,0 +1,5 @@
+set -tmpdir "D:/studing/schem/lab1_git/xst/projnav.tmp"
+set -xsthdpdir "D:/studing/schem/lab1_git/xst"
+elaborate
+-ifn datapath.prj
+-ifmt mixed

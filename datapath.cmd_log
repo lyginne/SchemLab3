@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/studing/schem/lab1_git/datapath.v -lang verilog -prj SchemLab1 -o datapath.spl -module datapath -template C:/Xilinx/14.4/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3a datapath.spl D:/studing/schem/lab1_git/datapath.sym 

@@ -9,9 +9,10 @@ module mips_cpu
 
    wire [1:0] alu_op,
 	    alu_src_b,
-	    pc_source,
 	    wreg_dst,
 	    wreg_data_sel;
+		 
+	wire [2:0] pc_source;
 										  
    wire     mem_read,
 	    mem_write,

@@ -24,7 +24,12 @@ module control_unit(
 					 
                 output reg [2:0]  pc_source,     // Select PC source
 					 
-					 output reg 		 int_save_pc    // Save PC before interrupt
+					 output reg 		 int_save_pc,   // Save PC before interrupt
+					 
+					 output reg		    uart_read_end, // uart read completion signal
+											 leds_write,    // write leds array signal
+					 
+					 output reg			 load_uart      // load data from uart instead of mem
 
 );
 
@@ -92,6 +97,9 @@ module control_unit(
         pc_write      = 0;
         pc_write_cond = 0;
 		  int_save_pc	 = 0;
+		  load_uart 	 = 0;
+		  leds_write	 = 0;
+		  uart_read_end = 0;
         
         //aux singals
         memory_op    = ( (opcode == LW) | ( opcode == SW) );
@@ -231,16 +239,29 @@ module control_unit(
                 if (opcode == LW)
                   begin
                      nextstate = MEM_READ_COMPLETION;
-                     // MDR <= Mem[ALUOut]
-                     i_or_d    = 1; // Data, for address used alu_out value
-                     mem_read  = 1;
+							
+							if (alu_out == {UART_MEM_ADDR})
+								load_uart = 1;
+							else
+							begin
+								// MDR <= Mem[ALUOut]
+								i_or_d    = 1; // Data, for address used alu_out value
+								mem_read  = 1;
+							end
+							
                   end
                 else begin // opcode == SW
                    nextstate = FETCH;
-                   // Mem[ALUOut] <= B
-                   // B connected with mem write lines in datapath
-                   i_or_d    = 1; // Data, alu_out as address
-                   mem_write = 1;
+						 
+						 if (alu_out == {LEDS_MEM_ADDR})
+						     leds_write = 1;
+					    else
+						 begin
+							 // Mem[ALUOut] <= B
+							 // B connected with mem write lines in datapath
+							 i_or_d    = 1; // Data, alu_out as address
+							 mem_write = 1;
+						 end
                 end
              end
           end
@@ -255,6 +276,9 @@ module control_unit(
              reg_write     = 1;
              wreg_dst      = 'b00; // write reg number defined by rt field (IR[20:16])
              wreg_data_sel = 'b01; // MDR value on WriteData lines of RegFile
+				 
+				 if (alu_out == {UART_MEM_ADDR})
+				     uart_read_end = 1;
           end
 			 
 			 INTERRUPT: begin

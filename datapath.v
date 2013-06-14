@@ -27,7 +27,12 @@ module datapath(
 					 
 					 input wire 		 int_save_pc,   // Save pc before interrupt
 					 
-                input wire [2:0]  pc_source      // Select PC source
+                input wire [2:0]  pc_source,     // Select PC source
+					 
+					 input wire [7:0]  uart_read_byte, // data from uart
+					 output wire [7:0] leds_write_byte, // leds mask to write
+					 
+					 input wire 		 load_uart       // load data from uart instead of memory
 					 
                 );
    
@@ -73,6 +78,8 @@ module datapath(
    wire [4:0]            alu_ctl;        // ALU control lines
    wire [5:0]            func_code;      // Func code for ALU control
    wire                  overflow;
+	
+	wire [31:0] 			 load_source; 
 
    /********************************************************************************************
     Combinational signals assignments used in the datapath
@@ -85,6 +92,8 @@ module datapath(
    assign pc_offset          = sing_extend_offset << 2;
    assign alu_a_in           = alu_src_a ? a_reg : pc_reg;         // ALU input is PC or A
 
+	assign leds_write_byte    = b_reg;
+	assign load_source = load_uart ? uart_read_byte : mem_out;
 
    /*
     Description of FuncCode signal
@@ -232,7 +241,7 @@ module datapath(
              if (ir_write)
                ir_reg <= mem_out;                      // Write the IR if an instruction fetch
              
-             mdr_reg  <= mem_out;                      // Always save the memory read value
+             mdr_reg  <= load_source;                  // Always save the memory read value
 
              a_reg <= a_out;
              

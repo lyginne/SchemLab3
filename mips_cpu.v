@@ -1,11 +1,13 @@
 module mips_cpu
   (
-   input clk,
-   input rst,
-	input int0
+   input wire clk,
+   input wire rst,
+	input wire int0,
+	output reg uart_read_end,
+	output reg leds_write,
+	input wire [7:0] uart_read_byte,
+	output reg [7:0] leds_write_byte
    );
-
-
 
    wire [1:0] alu_op,
 	    alu_src_b,
@@ -26,7 +28,8 @@ module mips_cpu
 		 int_save_pc;
 
    wire [5:0] opcode;
-   
+	
+	wire load_uart;
 
    control_unit ctrl_inst  (
 			    .clk          (clk),
@@ -47,7 +50,10 @@ module mips_cpu
 			    .imm_com      (imm_com),
 			    .opcode       (opcode),
 				 .int_sig		(int0),
-				 .int_save_pc  (int_save_pc)
+				 .int_save_pc  (int_save_pc),
+				 .uart_read_end (uart_read_end),
+				 .leds_write (leds_write),
+				 .load_uart (load_uart)
 			    );
    
 
@@ -69,7 +75,8 @@ module mips_cpu
 			   .alu_src_a(alu_src_a),	  
 			   .imm_com(imm_com),	  
 			   .opcode(opcode),
-				.int_save_pc(int_save_pc)
+				.int_save_pc(int_save_pc),
+				.load_uart (load_uart)
 			   );
    
 

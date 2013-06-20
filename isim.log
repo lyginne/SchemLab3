@@ -1,5 +1,5 @@
 ISim log file
-Running: D:\studing\schem\mips_testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/studing/schem/mips_testbench_isim_beh.wdb 
+Running: D:\studing\schem2\mips_testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/studing/schem2/mips_testbench_isim_beh.wdb 
 ISim P.49d (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -32,4 +32,7 @@ shift_read = 1010101x
 $uart_in = 1
 shift_read = 01010101
 will copy byte to buf
+interrupt
+$int0 = 1
+$int0 = 0
 $leds = xxxxxxxx

@@ -299,7 +299,7 @@ module control_unit(
 
    
    // Control FSM state reg
-   always @(posedge clk, posedge int_sig)
+   always @(posedge clk)
      begin
 	     if (clk)
 			begin
@@ -312,10 +312,12 @@ module control_unit(
 					state <= nextstate;
 				end
 			end
-		  else // if (int_sig)
-			begin
-				int_req = 1;
-			end
      end
+	  
+	always @(posedge int_sig)
+		begin
+			$display("interrupt");
+			int_req = 1;
+		end
    
 endmodule

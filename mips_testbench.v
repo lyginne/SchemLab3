@@ -2,7 +2,6 @@ module mips_testbench();
 
    reg clk;
    reg rst;
-	reg int0;
 	reg uart_in;
    
    cpu_perefery dat_cpu ( .clk(clk), .rst(rst), .uart_in(uart_in) );
@@ -63,6 +62,8 @@ module mips_testbench();
 		#10 uart_in =0;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
 		#10 uart_in =1;
+		#10 $display("$int0 = %b",dat_cpu.int0);
+		#50 $display("$int0 = %b",dat_cpu.int0);
 		#1000 $display("$leds = %b",dat_cpu.myuart.leds);
 		
    end

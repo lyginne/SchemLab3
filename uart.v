@@ -62,7 +62,8 @@ module uart(
 							 $display("will copy byte to buf");
 							 uart_to_cpu_buf = shift_read;
 							 //has_byte_to_read = 0;
-							 read_int = 1;
+							 read_int = 0;
+							 #1 read_int = 1;
 							 #50 read_int = 0;
 						//end
 						//else // otherwise set flag to copy recieved byte after read

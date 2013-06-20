@@ -21,32 +21,32 @@
 module cpu_perefery(
 	input wire clk,
    input wire rst,
-	output wire uart_read_end,
-	output wire leds_write,
-	input wire [7:0] uart_read_byte,
-	output wire [7:0] leds_write_byte,
-	input wire uart_in
+	input wire [7:0] uart_in
     );
 	 
-		 wire read_int;
+		 wire int0;
 		 wire cpu_end_read;
+		 wire [7:0] uart_to_cpu;
+		 wire [7:0] leds_array;
+		 wire write_leds;
 
 	uart myuart(		 
 		 .uart_in (uart_in),
 		 .read_int    (int0),
-		 .cpu_end_read (cpu_end_read)
-		 //MOAAR
+		 .cpu_end_read (cpu_end_read),
+		 .uart_to_cpu_but (uart_to_cpu),
+		 .leds_array (leds_array),
+		 .write_leds (write_leds)
 	);
 	 
 	  mips_cpu cpu(
 		 .clk						(clk),
+		 .rst						(rst),
 		 .int0					(int0),
-		 .uart_read_end 		(uart_read_end),
-		 .leds_write 			(leds_write),
-		 .uart_read_byte 		(uart_read_byte),
-		 .leds_write_byte 	(leds_write_byte)
-		 //.cpu_end_read 		(cpu_end_read)
-		 //MOAR
+		 .leds_write 			(write_leds),
+		 .uart_read_byte 		(uart_to_cpu),
+		 .leds_write_byte 	(leds_array),
+		 .uart_read_end 		(cpu_end_read)
     );
 
 

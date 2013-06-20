@@ -35,3 +35,6 @@ spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_
 vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
 xst -intstyle ise -ifn "/home/nik/lab1_git/cpu_perefery.xst" -ofn "/home/nik/lab1_git/cpu_perefery.syr" 
+xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
+xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
+xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 

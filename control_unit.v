@@ -69,7 +69,10 @@ module control_unit(
 	
 	// interrupt flags
 	reg 									 int_en;
-	reg 									 int_req;
+	reg 									 int_req_set, int_req_kill;
+	wire									 int_req;
+	
+	assign int_req = int_req_set ? 1 : int_req_kill;
 	
 	initial begin
       int_en = 1; // interrupts enabled at start  
@@ -308,7 +311,7 @@ module control_unit(
 			  else 
 				begin
 					if (state == INTERRUPT)
-						int_req = 0;
+						int_req_kill = 0;
 					state <= nextstate;
 				end
 			end
@@ -317,7 +320,7 @@ module control_unit(
 	always @(posedge int_sig)
 		begin
 			$display("interrupt");
-			int_req = 1;
+			int_req_set = 1;
 		end
    
 endmodule

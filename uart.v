@@ -40,19 +40,19 @@ module uart(
 	 
 	 always @(negedge uart_in)
 	 begin
-		  if (!is_reading) // then it's a start bit
-		  begin
-			  if (uart_in == 0) // check if still 0 after half-interval
+		  //if (!is_reading) // then it's a start bit
+		  //begin
+			  #5 if (uart_in == 0) // check if still 0 after half-interval
 			  begin
 					is_reading = 1;
 					
 					repeat (8) // read 8 bits
-					 #10 begin
-						 shift_read[7] = uart_in;
-						 shift_read = shift_read << 1;
+					 begin
+						 #10 shift_read[7] = uart_in;
+						 shift_read = shift_read >> 1;
 					 end
 					
-					#90 if (uart_in == 1) // check stop bit
+					#10 if (uart_in == 1) // check stop bit
 					begin 
 						if (!is_reading) // if not waiting for cp to read
 						begin // then copy shift reg to buffer and set flag for cpu
@@ -67,7 +67,7 @@ module uart(
 					
 					is_reading = 0;
 			  end
-		  end
+		  //end
 	 end
 	 
 	 always @(posedge cpu_end_read)

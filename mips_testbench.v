@@ -45,15 +45,23 @@ module mips_testbench();
       uart_in = 1; 
 		#500 uart_in = 0;
 		#10 uart_in =1;
+		$display("$t1 = %x",uart.shift_read);
 		#10 uart_in =0;
-		#10 uart_in =1;
-		#10 uart_in =0;
-		#10 uart_in =1;
-		#10 uart_in =0;
+		$display("$t1 = %x",uart.shift_read);
 		#10 uart_in =1;
 		$display("$t1 = %x",uart.shift_read);
 		#10 uart_in =0;
+		$display("$t1 = %x",uart.shift_read);
 		#10 uart_in =1;
+		$display("$t1 = %x",uart.shift_read);
+		#10 uart_in =0;
+		$display("$t1 = %x",uart.shift_read);
+		#10 uart_in =1;
+		$display("$t1 = %x",uart.shift_read);
+		#10 uart_in =0;
+		$display("$t1 = %x",uart.shift_read);
+		#10 uart_in =1;
+		$display("$t1 = %x",uart.shift_read);
 		
    end
    

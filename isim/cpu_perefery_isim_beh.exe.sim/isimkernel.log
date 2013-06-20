@@ -1,0 +1,29 @@
+Command line:
+   cpu_perefery_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58215
+
+Fri Jun 21 02:10:56 2013
+
+
+ Elaboration Time: 0.078 sec
+
+ Current Memory Usage: 508.936 Meg
+
+ Total Signals          : 133
+ Total Nets             : 848
+ Total Signal Drivers   : 59
+ Total Blocks           : 14
+ Total Primitive Blocks : 11
+ Total Processes        : 76
+ Total Traceable Variables  : 86
+ Total Scalar Nets and Variables : 35536
+Total Line Count : 287
+
+ Total Simulation Time: 0.0936 sec
+
+ Current Memory Usage: 508.936 Meg
+
+Fri Jun 21 02:10:59 2013
+

@@ -63,7 +63,7 @@ module mips_testbench();
 		#10 uart_in =0;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
 		#10 uart_in =1;
-		#1000 $display("$uart_in = %x",dat_cpu.myuart.leds);
+		#1000 $display("$leds = %b",dat_cpu.myuart.leds);
 		
    end
    

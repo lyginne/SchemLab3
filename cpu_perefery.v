@@ -21,7 +21,7 @@
 module cpu_perefery(
 	input wire clk,
    input wire rst,
-	input wire [7:0] uart_in
+	input wire uart_in
     );
 	 
 		 wire int0;
@@ -34,7 +34,7 @@ module cpu_perefery(
 		 .uart_in (uart_in),
 		 .read_int    (int0),
 		 .cpu_end_read (cpu_end_read),
-		 .uart_to_cpu_but (uart_to_cpu),
+		 .uart_to_cpu_buf (uart_to_cpu),
 		 .leds_array (leds_array),
 		 .write_leds (write_leds)
 	);

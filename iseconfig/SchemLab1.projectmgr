@@ -29,7 +29,7 @@
       <SelectedItems>
          <SelectedItem>View RTL Schematic</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
@@ -64,13 +64,13 @@
          <ClosedNode>/mips_testbench |home|nik|lab1_git|mips_testbench.v/dut - mips_cpu</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>mips_testbench (D:/studing/schem/mips_testbench.v)</SelectedItem>
+         <SelectedItem>cpu - mips_cpu (D:/studing/schem/mips_cpu.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000016a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000016a0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>mips_testbench (D:/studing/schem/mips_testbench.v)</CurrentItem>
+      <CurrentItem>cpu - mips_cpu (D:/studing/schem/mips_cpu.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -100,7 +100,7 @@
       <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001490000010001000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>

@@ -5,10 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/studing/schem/lab3_git/mips_testbench.v" Line 8: Port <arg fmt="%s" index="1">uart_read_end</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/nik/lab1_git/mips_testbench.v" Line 8: Port <arg fmt="%s" index="1">uart_read_end</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"D:/studing/schem/lab3_git/mips_testbench.v" Line 9: Port <arg fmt="%s" index="1">uart_to_cpu_buf</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/nik/lab1_git/cpu_perefery.v" Line 34: Port <arg fmt="%s" index="1">uart_to_cpu_buf</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/nik/lab1_git/cpu_perefery.v" Line 41: Port <arg fmt="%s" index="1">rst</arg> is not connected to this instance
 </msg>
 
 </messages>

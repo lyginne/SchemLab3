@@ -1,0 +1,13 @@
+[Inputs]
+clk
+rst
+uart_in
+=uart_read_byte[7:0]=
+[Outputs]
+uart_read_end
+leds_write
+=leds_write_byte[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel cpu_perefery
+

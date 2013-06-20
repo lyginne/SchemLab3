@@ -44,7 +44,7 @@ module cpu_perefery(
 		 .uart_read_end 		(uart_read_end),
 		 .leds_write 			(leds_write),
 		 .uart_read_byte 		(uart_read_byte),
-		 .leds_write_byte 	(leds_write_byte),
+		 .leds_write_byte 	(leds_write_byte)
 		 //.cpu_end_read 		(cpu_end_read)
 		 //MOAR
     );

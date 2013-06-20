@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+cpu_perefery instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .int0(int0), 
+    .uart_read_end(uart_read_end), 
+    .leds_write(leds_write), 
+    .uart_read_byte(uart_read_byte), 
+    .leds_write_byte(leds_write_byte)
+    );
+
+

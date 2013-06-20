@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Thu Jun 20 17:19:47 2013">
+<application name="pn" timeStamp="Fri Jun 21 01:39:44 2013">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="A44DCE5456CAA13DAC7C81EF872D8DAE" type="project"/>
 <property name="ProjectIteration" value="0" type="project"/>
@@ -34,11 +34,12 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_DevFamily" value="Spartan3A and Spartan3AN" type="design"/>
 <property name="PROP_DevDevice" value="xc3s700an" type="design"/>
 <property name="PROP_DevFamilyPMName" value="spartan3a" type="design"/>
+<property name="PROP_ISimSimulationRunTime_behav_tb" value="10000 ns" type="process"/>
 <property name="PROP_DevPackage" value="fgg484" type="design"/>
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
 <property name="PROP_DevSpeed" value="-5" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
-<property name="FILE_VERILOG" value="10" type="source"/>
+<property name="FILE_VERILOG" value="11" type="source"/>
 </section>
 </application>
 </document>

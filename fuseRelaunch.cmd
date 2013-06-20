@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/studing/schem/lab3_git/mips_testbench_isim_beh.exe" -prj "D:/studing/schem/lab3_git/mips_testbench_beh.prj" "work.mips_testbench" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/nik/lab1_git/mips_testbench_isim_beh.exe" -prj "/home/nik/lab1_git/mips_testbench_beh.prj" "work.mips_testbench" "work.glbl" 

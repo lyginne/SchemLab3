@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module uart(
 		 input wire uart_in,
-		 output wire [7:0] uart_to_cpu_buf,
+		 output reg[7:0] uart_to_cpu_buf,
 		 output reg read_int,
 		 input wire cpu_end_read,
 		 input wire [7:0] leds_array,
@@ -42,7 +42,7 @@ module uart(
 	 begin
 		  if (!is_reading) // then it's a start bit
 		  begin
-			  #5 if (uart_in == 0) // check if still 0 after half-interval
+			  if (uart_in == 0) // check if still 0 after half-interval
 			  begin
 					is_reading = 1;
 					
@@ -54,7 +54,7 @@ module uart(
 					
 					#90 if (uart_in == 1) // check stop bit
 					begin 
-						if (!read_flag) // if not waiting for cp to read
+						if (!is_reading) // if not waiting for cp to read
 						begin // then copy shift reg to buffer and set flag for cpu
 							 uart_to_cpu_buf = shift_read;
 							 has_byte_to_read = 0;
@@ -72,10 +72,10 @@ module uart(
 	 
 	 always @(posedge cpu_end_read)
 	 begin
-		  if (has_read_byte) // copy another byte if has one
+		  if (has_byte_to_read) // copy another byte if has one
 		  begin	
 				uart_to_cpu_buf = shift_read;
-				has_read_byte = 0;
+				has_byte_to_read = 0;
 				read_int = 1;
 				#10 read_int = 0;
 		  end

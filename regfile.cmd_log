@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj SchemLab1 -o /home/nik/lab1_git/regfile.tfi -lib work /home/nik/lab1_git//regfile.v -module regfile -template /opt/Xilinx/14.5/ISE_DS/ISE//data/tfi.tft -deleteonerror 

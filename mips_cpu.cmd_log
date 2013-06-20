@@ -39,3 +39,21 @@ xst -intstyle ise -ifn "D:/studing/schem/lab1_git/mips_cpu.xst" -ofn "D:/studing
 xst -intstyle ise -ifn "D:/studing/schem/lab1_git/mips_cpu.xst" -ofn "D:/studing/schem/lab1_git/mips_cpu.syr" 
 xst -intstyle ise -ifn "D:/studing/schem/lab1_git/mips_cpu.xst" -ofn "D:/studing/schem/lab1_git/mips_cpu.syr" 
 xst -intstyle ise -ifn "D:/studing/schem/lab1_git/mips_cpu.xst" -ofn "D:/studing/schem/lab1_git/mips_cpu.syr" 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+vhdtdtfi -lib work /home/nik/lab1_git/mips_cpu.v -lang verilog -prj SchemLab1 -o mips_cpu.spl -module mips_cpu -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3a mips_cpu.spl /home/nik/lab1_git/mips_cpu.sym 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-5 mips_cpu.ngc mips_cpu.ngd  
+netgen -intstyle ise -insert_glbl true -w -dir netgen/translate -ofmt verilog -sim mips_cpu.ngd mips_cpu_translate.v 
+xst -intstyle ise -ifn "/home/nik/lab1_git/mips_cpu.xst" -ofn "/home/nik/lab1_git/mips_cpu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-5 mips_cpu.ngc mips_cpu.ngd  
+vhdtdtfi -lang verilog -prj SchemLab1 -o /home/nik/lab1_git/mips_cpu.tfi -lib work /home/nik/lab1_git//mips_cpu.v -module mips_cpu -template /opt/Xilinx/14.5/ISE_DS/ISE//data/tfi.tft -deleteonerror 

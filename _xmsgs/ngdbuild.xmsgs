@@ -5,8 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="NgdBuild" num="578" delta="old" >Design contains no instances.
-</msg>
+<msg type="fatal" file="NgdBuild" num="0" delta="new" srcfile="/build/xfndry10/P.58f/env/XOS/Portability/export/Port_Main.h" srcline="159" srcrcs="1.6" >This application has discovered an exceptional condition from which it cannot recover.</msg>
 
 </messages>
 

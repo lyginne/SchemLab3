@@ -29,7 +29,9 @@ module control_unit(
 					 output reg		    uart_read_end, // uart read completion signal
 											 leds_write,    // write leds array signal
 					 
-					 output reg			 load_uart      // load data from uart instead of mem
+					 output reg			 load_uart,     // load data from uart instead of memput 
+					 
+					 input wire [31:0] alu_out
 
 );
 
@@ -240,7 +242,7 @@ module control_unit(
                   begin
                      nextstate = MEM_READ_COMPLETION;
 							
-							if (alu_out == {UART_MEM_ADDR})
+							if (alu_out == {32'h70}) // 32'h70 - uart map address
 								load_uart = 1;
 							else
 							begin
@@ -253,7 +255,7 @@ module control_unit(
                 else begin // opcode == SW
                    nextstate = FETCH;
 						 
-						 if (alu_out == {LEDS_MEM_ADDR})
+						 if (alu_out == 32'h78) // 32'h78 - leds map address
 						     leds_write = 1;
 					    else
 						 begin
@@ -277,7 +279,7 @@ module control_unit(
              wreg_dst      = 'b00; // write reg number defined by rt field (IR[20:16])
              wreg_data_sel = 'b01; // MDR value on WriteData lines of RegFile
 				 
-				 if (alu_out == {UART_MEM_ADDR})
+				 if (alu_out == 32'h70) // 32'h70 - uart map address
 				     uart_read_end = 1;
           end
 			 

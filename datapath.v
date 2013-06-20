@@ -32,7 +32,9 @@ module datapath(
 					 input wire [7:0]  uart_read_byte, // data from uart
 					 output wire [7:0] leds_write_byte, // leds mask to write
 					 
-					 input wire 		 load_uart       // load data from uart instead of memory
+					 input wire 		 load_uart,      // load data from uart instead of memory
+					 
+					 output wire [31:0] alu_out_value  
 					 
                 );
    
@@ -77,7 +79,6 @@ module datapath(
    wire [4:0]            write_reg;
    wire [4:0]            alu_ctl;        // ALU control lines
    wire [5:0]            func_code;      // Func code for ALU control
-   wire                  overflow;
 	
 	wire [31:0] 			 load_source; 
 
@@ -94,6 +95,8 @@ module datapath(
 
 	assign leds_write_byte    = b_reg;
 	assign load_source = load_uart ? uart_read_byte : mem_out;
+	
+	assign alu_out_value = alu_out_reg;
 
    /*
     Description of FuncCode signal

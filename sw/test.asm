@@ -8,19 +8,18 @@
 	j entry
 	nop
 	nop
-	and $t0, $t0, 0x0
-	and $t0, $t0, 0x0
+	lw $t1, 0x78
+	sw $t1, 0x70
 	rfe
 
 
 entry:
-        lw $t0, 0x200         /* t0 = 1*/
-        lw $t1, 0x200         /* t1 = 1*/
-        add $t0, $t0, 0xB     /* t0 = t0 + 0xB  == 0xC*/
-        sub $t0, $t0, $t1     /* t0 = t0 - $t1  == 0xB*/
-        or $t0, $t0, 0x10     /* t0 = t0 | 0x10 == 0x1B*/
-        xor $t0, $t0, $t1     /* t0 = t0 ^ t1   == 0x1A*/
-        slt $t0, $t0, $t1     /* t0 = t0 < t1   == 0*/
-        add $t0, $t0, $t1     /* to = t0 + t1   == 1*/
-        beq $t0, $t1, entry   /* PC = entry if t0 == t1*/
+	lw $t0, 0x200
+loop:
+        add $t0, $t0, 0x1    /* t0 = t0 + 0xB  == 0xC*/
+        add $t0, $t0, 0x1
+	add $t0, $t0, 0x1
+	add $t0, $t0, 0x1
+	add $t0, $t0, 0x1
+	j loop
 .end entry

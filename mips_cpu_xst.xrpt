@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Mon Jun 10 01:37:29 2013">
+  <application stringID="Xst" timeStamp="Thu Jun 20 17:19:50 2013">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -24,7 +24,7 @@
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/opt/Xilinx/14.5/ISE_DS/ISE//bin/lin64:/opt/Xilinx/14.5/ISE_DS/ISE/bin/lin64:/opt/Xilinx/14.5/ISE_DS/ISE/sysgen/util:/opt/Xilinx/14.5/ISE_DS/ISE/../../../DocNav:/opt/Xilinx/14.5/ISE_DS/PlanAhead/bin:/opt/Xilinx/14.5/ISE_DS/EDK/bin/lin64:/opt/Xilinx/14.5/ISE_DS/EDK/gnu/microblaze/lin64/bin:/opt/Xilinx/14.5/ISE_DS/EDK/gnu/powerpc-eabi/lin64/bin:/opt/Xilinx/14.5/ISE_DS/EDK/gnu/arm/lin/bin:/opt/Xilinx/14.5/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/opt/Xilinx/14.5/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/Xilinx/14.5/ISE_DS/common/bin/lin64:/home/nik/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/X11R6/bin:/usr/games:/opt/CodeSourcery/Sourcery_CodeBench_Lite_for_MIPS_GNU_Linux/bin:/opt/CodeSourcery/Sourcery_CodeBench_Lite_for_MIPS_ELF/bin"/>
+          <item stringID="value" value="/opt/Xilinx/14.5/ISE_DS/ISE//bin/lin64:/opt/Xilinx/14.5/ISE_DS/ISE/bin/lin64:/opt/Xilinx/14.5/ISE_DS/ISE/sysgen/util:/opt/Xilinx/14.5/ISE_DS/ISE/../../../DocNav:/opt/Xilinx/14.5/ISE_DS/PlanAhead/bin:/opt/Xilinx/14.5/ISE_DS/EDK/bin/lin64:/opt/Xilinx/14.5/ISE_DS/EDK/gnu/microblaze/lin64/bin:/opt/Xilinx/14.5/ISE_DS/EDK/gnu/powerpc-eabi/lin64/bin:/opt/Xilinx/14.5/ISE_DS/EDK/gnu/arm/lin/bin:/opt/Xilinx/14.5/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/opt/Xilinx/14.5/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/Xilinx/14.5/ISE_DS/common/bin/lin64:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/CodeSourcery/Sourcery_CodeBench_Lite_for_MIPS_ELF/bin"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="XILINX_PLANAHEAD"/>
@@ -36,16 +36,16 @@
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
-        <item stringID="User_EnvOsname" value="SUSE LINUX"/>
-        <item stringID="User_EnvOsrelease" value="openSUSE 12.2 (x86_64)"/>
+        <item stringID="User_EnvOsname" value="Ubuntu"/>
+        <item stringID="User_EnvOsrelease" value="Ubuntu 13.04"/>
       </item>
-      <item stringID="User_EnvHost" value="Beast"/>
+      <item stringID="User_EnvHost" value="Laptop"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i5 CPU         650  @ 3.20GHz"/>
-          <item stringID="speed" value="3201.000 MHz"/>
+          <item stringID="arch" value="Intel(R) Core(TM) i3-2350M CPU @ 2.30GHz"/>
+          <item stringID="speed" value="2300.000 MHz"/>
         </row>
       </table>
     </section>
@@ -109,7 +109,7 @@
       <item dataType="int" stringID="XST_RAMS" value="1"></item>
       <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="1"></item>
       <item dataType="int" stringID="XST_REGISTERS" value="40">
-        <item dataType="int" stringID="XST_3BIT_REGISTER" value="1"/>
+        <item dataType="int" stringID="XST_1BIT_REGISTER" value="1"/>
         <item dataType="int" stringID="XST_32BIT_REGISTER" value="39"/>
       </item>
       <item dataType="int" stringID="XST_COMPARATORS" value="1"></item>
@@ -121,8 +121,8 @@
     <section stringID="XST_ADVANCED_HDL_SYNTHESIS_REPORT">
       <item dataType="int" stringID="XST_RAMS" value="1"></item>
       <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="1"></item>
-      <item dataType="int" stringID="XST_REGISTERS" value="1251">
-        <item dataType="int" stringID="XST_FLIPFLOPS" value="1251"/>
+      <item dataType="int" stringID="XST_REGISTERS" value="1249">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="1249"/>
       </item>
       <item dataType="int" stringID="XST_COMPARATORS" value="1"></item>
       <item dataType="int" stringID="XST_MULTIPLEXERS" value="68">
@@ -130,7 +130,11 @@
       </item>
       <item dataType="int" stringID="XST_XORS" value="1"></item>
     </section>
-    <section stringID="XST_FINAL_REGISTER_REPORTFOUND_NO_MACRO"/>
+    <section stringID="XST_FINAL_REGISTER_REPORT">
+      <item dataType="int" stringID="XST_REGISTERS" value="1249">
+        <item dataType="int" stringID="XST_FLIPFLOPS" value="1249"/>
+      </item>
+    </section>
     <section stringID="XST_PARTITION_REPORT">
       <section stringID="XST_PARTITION_IMPLEMENTATION_STATUS">
         <section stringID="XST_NO_PARTITIONS_WERE_FOUND_IN_THIS_DESIGN"/>
@@ -145,23 +149,63 @@
         <item stringID="XST_KEEP_HIERARCHY" value="No"/>
       </section>
       <section stringID="XST_DESIGN_STATISTICS">
-        <item stringID="XST_IOS" value="3"/>
+        <item stringID="XST_IOS" value="21"/>
       </section>
-      <section stringID="XST_CELL_USAGE"/>
+      <section stringID="XST_CELL_USAGE">
+        <item dataType="int" stringID="XST_BELS" value="3766">
+          <item dataType="int" stringID="XST_GND" value="1"/>
+          <item dataType="int" stringID="XST_INV" value="1"/>
+          <item dataType="int" stringID="XST_LUT2" value="5"/>
+          <item dataType="int" stringID="XST_LUT2D" value="2"/>
+          <item dataType="int" stringID="XST_LUT3" value="1745"/>
+          <item dataType="int" stringID="XST_LUT3D" value="6"/>
+          <item dataType="int" stringID="XST_LUT3L" value="1"/>
+          <item dataType="int" stringID="XST_LUT4" value="357"/>
+          <item dataType="int" stringID="XST_LUT4D" value="23"/>
+          <item dataType="int" stringID="XST_LUT4L" value="20"/>
+          <item dataType="int" stringID="XST_MUXCY" value="71"/>
+          <item dataType="int" stringID="XST_MUXF5" value="861"/>
+          <item dataType="int" stringID="XST_MUXF6" value="384"/>
+          <item dataType="int" stringID="XST_MUXF7" value="192"/>
+          <item dataType="int" stringID="XST_MUXF8" value="64"/>
+          <item dataType="int" stringID="XST_VCC" value="1"/>
+          <item dataType="int" stringID="XST_XORCY" value="32"/>
+        </item>
+        <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="1253">
+          <item dataType="int" stringID="XST_FDCE" value="1"/>
+          <item dataType="int" stringID="XST_FDE" value="1088"/>
+          <item dataType="int" stringID="XST_FDR" value="64"/>
+          <item dataType="int" stringID="XST_FDRE" value="96"/>
+        </item>
+        <item dataType="int" stringID="XST_RAMS" value="1024"></item>
+        <item dataType="int" stringID="XST_CLOCK_BUFFERS" value="2">
+          <item dataType="int" label="-bufg" stringID="XST_BUFG" value="1"/>
+          <item dataType="int" stringID="XST_BUFGP" value="1"/>
+        </item>
+        <item dataType="int" stringID="XST_IO_BUFFERS" value="20">
+          <item dataType="int" stringID="XST_IBUF" value="10"/>
+          <item dataType="int" stringID="XST_OBUF" value="10"/>
+        </item>
+      </section>
     </section>
     <section stringID="XST_DEVICE_UTILIZATION_SUMMARY">
       <item stringID="XST_SELECTED_DEVICE" value="3s700anfgg484-5"/>
-      <item AVAILABLE="5888" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="0"/>
-      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="3"/>
-      <item AVAILABLE="372" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="0"/>
+      <item AVAILABLE="5888" dataType="int" label="Number of Slices" stringID="XST_NUMBER_OF_SLICES" value="2151"/>
+      <item AVAILABLE="11776" dataType="int" label="Number of Slice Flip Flops" stringID="XST_NUMBER_OF_SLICE_FLIP_FLOPS" value="1253"/>
+      <item AVAILABLE="11776" dataType="int" label="Number of 4 input LUTs" stringID="XST_NUMBER_OF_4_INPUT_LUTS" value="4208"/>
+      <item dataType="int" label="Number used as Logic" stringID="XST_NUMBER_USED_AS_LOGIC" value="2160"/>
+      <item dataType="int" stringID="XST_NUMBER_USED_AS_RAMS" value="2048"/>
+      <item dataType="int" label="Number of IOs" stringID="XST_NUMBER_OF_IOS" value="21"/>
+      <item AVAILABLE="372" dataType="int" label="Number of bonded IOBs" stringID="XST_NUMBER_OF_BONDED_IOBS" value="21"/>
+      <item AVAILABLE="24" dataType="int" label="Number of GCLKs" stringID="XST_NUMBER_OF_GCLKS" value="2"/>
     </section>
     <section stringID="XST_PARTITION_RESOURCE_SUMMARY">
       <section stringID="XST_NO_PARTITIONS_WERE_FOUND_IN_THIS_DESIGN"/>
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="2287"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="7"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="8"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="8"/>
     </section>
   </application>
 

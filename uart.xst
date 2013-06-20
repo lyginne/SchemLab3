@@ -1,0 +1,5 @@
+set -tmpdir "/home/nik/lab1_git/xst/projnav.tmp"
+set -xsthdpdir "/home/nik/lab1_git/xst"
+elaborate
+-ifn uart.prj
+-ifmt mixed

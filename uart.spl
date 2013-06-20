@@ -1,0 +1,12 @@
+[Inputs]
+uart_in
+cpu_end_read
+write_leds
+=leds_array[7:0]=
+[Outputs]
+read_int
+=uart_to_cpu_buf[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel uart
+

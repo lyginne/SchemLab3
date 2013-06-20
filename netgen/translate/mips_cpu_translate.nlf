@@ -1,0 +1,9 @@
+Release 14.5 - netgen P.58f (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -insert_glbl true -w -dir netgen/translate
+-ofmt verilog -sim mips_cpu.ngd mips_cpu_translate.v  
+
+Reading design 'mips_cpu.ngd' ...
+EXCEPTION:Xdm:ModelImp.c:853:$Id: ModelImp.c,v 1.28 2009/06/12 19:55:28 jdl Exp
+   $ - Xdm_Exception::InvalidFileFormat format=binary file='mips_cpu.ngd'

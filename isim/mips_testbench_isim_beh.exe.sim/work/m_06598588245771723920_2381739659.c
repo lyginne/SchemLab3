@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/nik/SchemLab1/memory.v";
+static const char *ng0 = "/home/nik/lab1_git/memory.v";
 static const char *ng1 = "./sw/test.rom";
 static int ng2[] = {0, 0};
 

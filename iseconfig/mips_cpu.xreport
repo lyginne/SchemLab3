@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-06-13T23:46:34</DateModified>
+  <DateModified>2013-06-20T18:11:47</DateModified>
   <ModuleName>mips_cpu</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/studing/schem/lab1_git/iseconfig/mips_cpu.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/studing/schem/lab1_git\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2013-06-20T17:20:34</SummaryTimeStamp>
+  <SavedFilePath>/home/nik/lab1_git/iseconfig/mips_cpu.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/nik/lab1_git/</ImplementationReportsDirectory>
   <DateInitialized>2013-06-09T21:24:09</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

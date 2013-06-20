@@ -42,26 +42,29 @@ module mips_testbench();
    end
 	
 	initial begin
-      uart_in = 1; 
+		$display("$uart_in = %b",uart.uart_in);
+      uart_in = 1;
+		$display("$uart_in = %b",uart.uart_in); 
 		#500 uart_in = 0;
+		$display("$uart_in = %b",uart.uart_in);
 		#10 uart_in =1;
-		$display("$t1 = %x",uart.shift_read);
+		$display("$uart_in = %b",uart.uart_in);
 		#10 uart_in =0;
-		$display("$t1 = %x",uart.shift_read);
+		$display("$uart_in = %b",uart.uart_in);
 		#10 uart_in =1;
-		$display("$t1 = %x",uart.shift_read);
+		$display("$uart_in = %b",uart.uart_in);
 		#10 uart_in =0;
-		$display("$t1 = %x",uart.shift_read);
+		$display("$uart_in = %b",uart.uart_in);
 		#10 uart_in =1;
-		$display("$t1 = %x",uart.shift_read);
+		$display("$uart_in = %b",uart.uart_in);
 		#10 uart_in =0;
-		$display("$t1 = %x",uart.shift_read);
+		$display("$uart_in = %b",uart.uart_in);
 		#10 uart_in =1;
-		$display("$t1 = %x",uart.shift_read);
+		$display("$uart_in = %b",uart.uart_in);
 		#10 uart_in =0;
-		$display("$t1 = %x",uart.shift_read);
+		$display("$uart_in = %b",uart.uart_in);
 		#10 uart_in =1;
-		$display("$t1 = %x",uart.shift_read);
+		$display("$uart_in = %b",uart.uart_in);
 		
    end
    

@@ -36,5 +36,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 7 sub-compilation(s) to finish...
 Compiled 14 Verilog Units
 Built simulation executable D:/studing/schem/lab3_git/mips_testbench_isim_beh.exe
-Fuse Memory Usage: 29792 KB
-Fuse CPU Usage: 405 ms
+Fuse Memory Usage: 29772 KB
+Fuse CPU Usage: 420 ms

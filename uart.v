@@ -27,7 +27,8 @@ module uart(
 		 input wire write_leds
     );
 	 
-	 reg is_reading, has_byte_to_read;
+	 reg is_reading;
+	 //reg has_byte_to_read;
 	 
 	 reg [7:0] shift_read;
 	 
@@ -40,37 +41,40 @@ module uart(
 	 
 	 always @(negedge uart_in)
 	 begin
-		  //if (!is_reading) // then it's a start bit
-		  //begin
+		  if (!is_reading) // then it's a start bit
+		  begin
+			$display("!is_reading");
 			  #5 if (uart_in == 0) // check if still 0 after half-interval
 			  begin
 					is_reading = 1;
 					
 					repeat (8) // read 8 bits
 					 begin
-						 #10 shift_read[7] = uart_in;
 						 shift_read = shift_read >> 1;
+						 #10 shift_read[7] = uart_in;
+						 $display("shift_read = %b",uart.shift_read);
 					 end
 					
 					#10 if (uart_in == 1) // check stop bit
 					begin 
-						if (!is_reading) // if not waiting for cp to read
-						begin // then copy shift reg to buffer and set flag for cpu
+						//if (!is_reading) // if not waiting for cpu to read
+						//begin // then copy shift reg to buffer and set flag for cpu
+							 $display("will copy byte to buf");
 							 uart_to_cpu_buf = shift_read;
-							 has_byte_to_read = 0;
+							 //has_byte_to_read = 0;
 							 read_int = 1;
-							 #10 read_int = 0;
-						end
-						else // otherwise set flag to copy recieved byte after read
-							has_byte_to_read = 1;
+							 #50 read_int = 0;
+						//end
+						//else // otherwise set flag to copy recieved byte after read
+						//	has_byte_to_read = 1;
 					end
 					
 					is_reading = 0;
 			  end
-		  //end
+		  end
 	 end
 	 
-	 always @(posedge cpu_end_read)
+	 /*always @(posedge cpu_end_read)
 	 begin
 		  if (has_byte_to_read) // copy another byte if has one
 		  begin	
@@ -79,7 +83,7 @@ module uart(
 				read_int = 1;
 				#10 read_int = 0;
 		  end
-	 end
+	 end*/
 	 
 	 always @(posedge write_leds)
 	 begin

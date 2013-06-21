@@ -69,10 +69,8 @@ module control_unit(
 	
 	// interrupt flags
 	reg 									 int_en;
-	reg 									 int_req_set, int_req_kill;
-	wire									 int_req;
+	reg 									 int_req, int_req_to_get;
 	
-	assign int_req = int_req_set ? 1 : int_req_kill;
 	
 	initial begin
       int_en = 1; // interrupts enabled at start  
@@ -287,6 +285,7 @@ module control_unit(
           end
 			 
 			 INTERRUPT: begin
+				$display("interrupt");
 				 nextstate     = FETCH;
 				 
 				 pc_source 		= 'b11; // write interrupt vector address
@@ -300,9 +299,15 @@ module control_unit(
      end // always @ (state or opcode)
 
 
+	always @(posedge int_sig)
+		begin
+			int_req_to_get = 1;
+			#5 int_req_to_get = 0;
+		end
+
    
    // Control FSM state reg
-   always @(posedge clk)
+   always @(posedge clk, posedge int_req_to_get)
      begin
 	     if (clk)
 			begin
@@ -311,16 +316,14 @@ module control_unit(
 			  else 
 				begin
 					if (state == INTERRUPT)
-						int_req_kill = 0;
+						int_req = 0;
 					state <= nextstate;
 				end
 			end
+			
+			if (int_req_to_get)
+			begin
+				int_req = 1;
+			end
      end
-	  
-	always @(posedge int_sig)
-		begin
-			$display("interrupt");
-			int_req_set = 1;
-		end
-   
 endmodule

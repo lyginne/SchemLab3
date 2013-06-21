@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: cpu_perefery.prj
 
@@ -236,9 +236,9 @@ Analyzing module <control_unit> in library <work>.
 	SLTI = 6'b001010
 	SW = 6'b101011
 	XORI = 6'b001110
-WARNING:Xst:905 - "control_unit.v" line 85: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:905 - "control_unit.v" line 83: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <immidiate_op>, <int_en>, <int_req>, <alu_out>
-"control_unit.v" line 322: $display : interrupt
+WARNING:Xst:916 - "control_unit.v" line 304: Delay is ignored for synthesis.
 Module <control_unit> is correct for synthesis.
  
 Analyzing module <datapath> in library <work>.
@@ -291,7 +291,7 @@ INFO:Xst:2679 - Register <shift_read<3>> in unit <uart> has a constant value of 
 INFO:Xst:2679 - Register <shift_read<2>> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <shift_read<1>> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <shift_read<0>> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <int_req_kill> in unit <control_unit> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <int_req> in unit <control_unit> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <uart>.
     Related source file is "uart.v".
@@ -308,14 +308,10 @@ Synthesizing Unit <control_unit>.
 WARNING:Xst:647 - Input <int_sig> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:646 - Signal <r_type_op> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <memory_op> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <int_req_kill> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <branch_op> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:2474 - Clock and clock enable of register <state> are driven by the same logic. The clock enable is removed.
+WARNING:Xst:737 - Found 3-bit latch for signal <state>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <int_en>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 3-bit register for signal <state>.
-    Summary:
-	inferred   3 D-type flip-flop(s).
 Unit <control_unit> synthesized.
 
 
@@ -421,11 +417,10 @@ Macro Statistics
  1024x32-bit single-port RAM                           : 1
 # Adders/Subtractors                                   : 1
  32-bit addsub                                         : 1
-# Registers                                            : 40
- 3-bit register                                        : 1
+# Registers                                            : 39
  32-bit register                                       : 39
 # Latches                                              : 1
- 1-bit latch                                           : 1
+ 3-bit latch                                           : 1
 # Comparators                                          : 1
  32-bit comparator less                                : 1
 # Multiplexers                                         : 6
@@ -471,10 +466,10 @@ Macro Statistics
  1024x32-bit single-port distributed RAM               : 1
 # Adders/Subtractors                                   : 1
  32-bit addsub                                         : 1
-# Registers                                            : 1251
- Flip-Flops                                            : 1251
+# Registers                                            : 1248
+ Flip-Flops                                            : 1248
 # Latches                                              : 1
- 1-bit latch                                           : 1
+ 3-bit latch                                           : 1
 # Comparators                                          : 1
  32-bit comparator less                                : 1
 # Multiplexers                                         : 68
@@ -494,16 +489,15 @@ Macro Statistics
 
 Optimizing unit <cpu_perefery> ...
 
-Optimizing unit <control_unit> ...
-
 Optimizing unit <memory> ...
 
 Optimizing unit <regfile> ...
 
 Optimizing unit <alu> ...
 
+Optimizing unit <control_unit> ...
+
 Optimizing unit <datapath> ...
-WARNING:Xst:2677 - Node <cpu/ctrl_inst/int_en> of sequential type is unconnected in block <cpu_perefery>.
 WARNING:Xst:2677 - Node <cpu/ctrl_inst/state_2> of sequential type is unconnected in block <cpu_perefery>.
 WARNING:Xst:2677 - Node <cpu/ctrl_inst/state_1> of sequential type is unconnected in block <cpu_perefery>.
 WARNING:Xst:2677 - Node <cpu/ctrl_inst/state_0> of sequential type is unconnected in block <cpu_perefery>.
@@ -2868,14 +2862,14 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 23.23 secs
+Total REAL time to Xst completion: 22.00 secs
+Total CPU time to Xst completion: 22.27 secs
  
 --> 
 
-Total memory usage is 317124 kilobytes
+Total memory usage is 317252 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 2307 (   0 filtered)
+Number of warnings : 2306 (   0 filtered)
 Number of infos    :   17 (   0 filtered)
 

@@ -32,7 +32,7 @@ shift_read = 1010101x
 $uart_in = 1
 shift_read = 01010101
 will copy byte to buf
-interrupt
 $int0 = 1
+interrupt
 $int0 = 0
 $leds = xxxxxxxx

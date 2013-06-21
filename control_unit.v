@@ -243,7 +243,7 @@ module control_unit(
                   begin
                      nextstate = MEM_READ_COMPLETION;
 							$display("$uart_read = %x",alu_out);
-							if (alu_out == {32'h70}) 
+							if (alu_out == {32'h204}) 
 							
 // 32'h70 - uart map address
 								load_uart = 1;
@@ -258,7 +258,7 @@ module control_unit(
                 else begin // opcode == SW
                    nextstate = FETCH;
 						 $display("$leds_write = %x",alu_out);
-						 if (alu_out == 32'h78)
+						 if (alu_out == 32'h1ec)
 								begin						 // 32'h78 - leds map address
 							 
 						     leds_write = 1;

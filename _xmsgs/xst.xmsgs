@@ -47,13 +47,13 @@
 <msg type="warning" file="Xst" num="2323" delta="old" >&quot;<arg fmt="%s" index="1">uart.v</arg>&quot; line <arg fmt="%d" index="2">55</arg>: Parameter <arg fmt="%d" index="3">2</arg> is not constant in call of system task <arg fmt="%s" index="4">$display</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="2326" delta="new" >&quot;<arg fmt="%s" index="1">control_unit.v</arg>&quot; line <arg fmt="%d" index="2">245</arg>: Invalid escape sequence : %<arg fmt="%c" index="3">x</arg>.
+<msg type="warning" file="Xst" num="2326" delta="old" >&quot;<arg fmt="%s" index="1">control_unit.v</arg>&quot; line <arg fmt="%d" index="2">245</arg>: Invalid escape sequence : %<arg fmt="%c" index="3">x</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="2323" delta="old" >&quot;<arg fmt="%s" index="1">control_unit.v</arg>&quot; line <arg fmt="%d" index="2">245</arg>: Parameter <arg fmt="%d" index="3">2</arg> is not constant in call of system task <arg fmt="%s" index="4">$display</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="2326" delta="new" >&quot;<arg fmt="%s" index="1">control_unit.v</arg>&quot; line <arg fmt="%d" index="2">260</arg>: Invalid escape sequence : %<arg fmt="%c" index="3">x</arg>.
+<msg type="warning" file="Xst" num="2326" delta="old" >&quot;<arg fmt="%s" index="1">control_unit.v</arg>&quot; line <arg fmt="%d" index="2">260</arg>: Invalid escape sequence : %<arg fmt="%c" index="3">x</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="2323" delta="old" >&quot;<arg fmt="%s" index="1">control_unit.v</arg>&quot; line <arg fmt="%d" index="2">260</arg>: Parameter <arg fmt="%d" index="3">2</arg> is not constant in call of system task <arg fmt="%s" index="4">$display</arg>.

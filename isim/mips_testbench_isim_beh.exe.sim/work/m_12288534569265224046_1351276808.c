@@ -39,10 +39,11 @@ static unsigned int ng14[] = {3U, 0U};
 static unsigned int ng15[] = {2U, 0U};
 static unsigned int ng16[] = {16U, 0U};
 static const char *ng17 = "$uart_read = %x";
-static unsigned int ng18[] = {112U, 0U};
+static unsigned int ng18[] = {516U, 0U};
 static const char *ng19 = "$leds_write = %x";
-static unsigned int ng20[] = {120U, 0U};
-static const char *ng21 = "interrupt";
+static unsigned int ng20[] = {492U, 0U};
+static unsigned int ng21[] = {112U, 0U};
+static const char *ng22 = "interrupt";
 
 
 
@@ -1316,7 +1317,7 @@ LAB160:    xsi_set_current_line(282, ng0);
     xsi_set_current_line(288, ng0);
     t2 = (t0 + 4136U);
     t3 = *((char **)t2);
-    t2 = ((char*)((ng18)));
+    t2 = ((char*)((ng21)));
     memset(t6, 0, 8);
     t5 = (t3 + 4);
     t19 = (t2 + 4);
@@ -1355,7 +1356,7 @@ LAB167:    goto LAB72;
 LAB68:    xsi_set_current_line(292, ng0);
 
 LAB168:    xsi_set_current_line(293, ng0);
-    xsi_vlogfile_write(1, 0, 0, ng21, 1, t0);
+    xsi_vlogfile_write(1, 0, 0, ng22, 1, t0);
     xsi_set_current_line(294, ng0);
     t2 = (t0 + 2104);
     t3 = *((char **)t2);

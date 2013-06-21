@@ -36,7 +36,7 @@ module mips_testbench();
            @(posedge clk);
            $display("$int0 = %b",dat_cpu.int0);
 			  $display("$PC = %x",dat_cpu.cpu.datapath_inst.pc_reg);
-			  $display("$PC = %x",dat_cpu.cpu.datapath_inst.regfile_inst.rf[9]);
+			  $display("$leds = %x",dat_cpu.myuart.leds);
 			  
         end
    end

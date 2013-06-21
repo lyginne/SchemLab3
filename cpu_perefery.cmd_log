@@ -48,3 +48,4 @@ xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/sch
 xst -intstyle ise -ifn "/home/nik/SchemLab3/cpu_perefery.xst" -ofn "/home/nik/SchemLab3/cpu_perefery.syr" 
 xst -intstyle ise -ifn "/home/nik/SchemLab3/cpu_perefery.xst" -ofn "/home/nik/SchemLab3/cpu_perefery.syr" 
 xst -intstyle ise -ifn "/home/nik/SchemLab3/cpu_perefery.xst" -ofn "/home/nik/SchemLab3/cpu_perefery.syr" 
+xst -intstyle ise -ifn "/home/nik/SchemLab3/cpu_perefery.xst" -ofn "/home/nik/SchemLab3/cpu_perefery.syr" 

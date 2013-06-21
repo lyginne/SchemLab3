@@ -18,7 +18,7 @@ Analyzing Verilog file "/opt/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v" into li
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 95796 KB
-Fuse CPU Usage: 1580 ms
+Fuse CPU Usage: 1490 ms
 Compiling module uart
 Compiling module control_unit
 Compiling module memory
@@ -39,5 +39,5 @@ Waiting for 8 sub-compilation(s) to finish...
 Compiled 15 Verilog Units
 Built simulation executable /home/nik/SchemLab3/mips_testbench_isim_beh.exe
 Fuse Memory Usage: 656208 KB
-Fuse CPU Usage: 1640 ms
-GCC CPU Usage: 1590 ms
+Fuse CPU Usage: 1560 ms
+GCC CPU Usage: 1600 ms

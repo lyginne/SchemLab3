@@ -5,22 +5,22 @@ test.axf:     file format elf32-tradbigmips
 Disassembly of section .text:
 
 00000000 <_ftext>:
-   0:	08000008 	j	20 <entry>
+   0:	0800000c 	j	30 <entry>
    4:	00000000 	nop
 	...
-  10:	8c090078 	lw	t1,120(zero)
-  14:	00000000 	nop
-  18:	ac090070 	sw	t1,112(zero)
-  1c:	42000010 	rfe
-
-00000020 <entry>:
-  20:	8c080200 	lw	t0,512(zero)
+  20:	8c090078 	lw	t1,120(zero)
   24:	00000000 	nop
+  28:	ac090070 	sw	t1,112(zero)
+  2c:	42000010 	rfe
 
-00000028 <loop>:
-  28:	21080001 	addi	t0,t0,1
-  2c:	21080001 	addi	t0,t0,1
-  30:	21080001 	addi	t0,t0,1
-  34:	21080001 	addi	t0,t0,1
-  38:	0800000a 	j	28 <loop>
+00000030 <entry>:
+  30:	8c080200 	lw	t0,512(zero)
+  34:	00000000 	nop
+
+00000038 <loop>:
+  38:	21080001 	addi	t0,t0,1
   3c:	21080001 	addi	t0,t0,1
+  40:	21080001 	addi	t0,t0,1
+  44:	21080001 	addi	t0,t0,1
+  48:	0800000e 	j	38 <loop>
+  4c:	21080001 	addi	t0,t0,1

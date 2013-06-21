@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-06-21T02:22:53</DateModified>
+  <DateModified>2013-06-21T04:51:46</DateModified>
   <ModuleName>cpu_perefery</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/studing/schem2/iseconfig/cpu_perefery.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/studing/schem2\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2013-06-21T03:48:33</SummaryTimeStamp>
+  <SavedFilePath>/home/nik/SchemLab3/iseconfig/cpu_perefery.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/nik/SchemLab3/</ImplementationReportsDirectory>
   <DateInitialized>2013-06-21T01:49:02</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

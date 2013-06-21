@@ -242,8 +242,10 @@ module control_unit(
                 if (opcode == LW)
                   begin
                      nextstate = MEM_READ_COMPLETION;
+							$display("$uart_read = %x",alu_out);
+							if (alu_out == {32'h70}) 
 							
-							if (alu_out == {32'h70}) // 32'h70 - uart map address
+// 32'h70 - uart map address
 								load_uart = 1;
 							else
 							begin
@@ -255,9 +257,12 @@ module control_unit(
                   end
                 else begin // opcode == SW
                    nextstate = FETCH;
-						 
-						 if (alu_out == 32'h78) // 32'h78 - leds map address
+						 $display("$leds_write = %x",alu_out);
+						 if (alu_out == 32'h78)
+								begin						 // 32'h78 - leds map address
+							 
 						     leds_write = 1;
+							  end
 					    else
 						 begin
 							 // Mem[ALUOut] <= B
@@ -279,7 +284,7 @@ module control_unit(
              reg_write     = 1;
              wreg_dst      = 'b00; // write reg number defined by rt field (IR[20:16])
              wreg_data_sel = 'b01; // MDR value on WriteData lines of RegFile
-				 
+
 				 if (alu_out == 32'h70) // 32'h70 - uart map address
 				     uart_read_end = 1;
           end

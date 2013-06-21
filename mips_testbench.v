@@ -21,7 +21,7 @@ module mips_testbench();
 
       rst = 0;
 
-      repeat (10000)				
+      repeat (20000)				
 			@(posedge clk);
 				
 					
@@ -34,8 +34,10 @@ module mips_testbench();
       forever
         begin
            @(posedge clk);
-			  ;;
-           //$display("$t0 (REG8) = %x",dut.datapath_inst.regfile_inst.rf[8]);
+           $display("$int0 = %b",dat_cpu.int0);
+			  $display("$PC = %x",dat_cpu.cpu.datapath_inst.pc_reg);
+			  $display("$PC = %x",dat_cpu.cpu.datapath_inst.regfile_inst.rf[9]);
+			  
         end
    end
 	
@@ -62,8 +64,6 @@ module mips_testbench();
 		#10 uart_in =0;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
 		#10 uart_in =1;
-		#10 $display("$int0 = %b",dat_cpu.int0);
-		#50 $display("$int0 = %b",dat_cpu.int0);
 		#1000 $display("$leds = %b",dat_cpu.myuart.leds);
 		
    end

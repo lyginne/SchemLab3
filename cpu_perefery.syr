@@ -1,18 +1,21 @@
-Release 14.4 - xst P.49d (nt64)
+Release 14.5 - xst P.58f (lin64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to xst/projnav.tmp
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
---> Parameter xsthdpdir set to xst
+--> 
+Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.06 secs
  
---> Reading design: cpu_perefery.prj
+--> 
+Reading design: cpu_perefery.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -236,9 +239,16 @@ Analyzing module <control_unit> in library <work>.
 	SLTI = 6'b001010
 	SW = 6'b101011
 	XORI = 6'b001110
+WARNING:Xst:2326 - "control_unit.v" line 245: Invalid escape sequence : %x.
+WARNING:Xst:2323 - "control_unit.v" line 245: Parameter 2 is not constant in call of system task $display.
+"control_unit.v" line 245: $display : $uart_read = %x
+WARNING:Xst:2326 - "control_unit.v" line 260: Invalid escape sequence : %x.
+WARNING:Xst:2323 - "control_unit.v" line 260: Parameter 2 is not constant in call of system task $display.
+"control_unit.v" line 260: $display : $leds_write = %x
+"control_unit.v" line 293: $display : interrupt
 WARNING:Xst:905 - "control_unit.v" line 83: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <immidiate_op>, <int_en>, <int_req>, <alu_out>
-WARNING:Xst:916 - "control_unit.v" line 304: Delay is ignored for synthesis.
+WARNING:Xst:916 - "control_unit.v" line 310: Delay is ignored for synthesis.
 Module <control_unit> is correct for synthesis.
  
 Analyzing module <datapath> in library <work>.
@@ -2862,14 +2872,15 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 
 
-Total REAL time to Xst completion: 22.00 secs
-Total CPU time to Xst completion: 22.27 secs
+Total REAL time to Xst completion: 21.00 secs
+Total CPU time to Xst completion: 19.17 secs
  
 --> 
 
-Total memory usage is 317252 kilobytes
+
+Total memory usage is 572460 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 2306 (   0 filtered)
+Number of warnings : 2310 (   0 filtered)
 Number of infos    :   17 (   0 filtered)
 

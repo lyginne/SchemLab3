@@ -76,7 +76,6 @@ module uart(
 		begin
 			if (!uart_in)
 			begin
-				$display("start bit check");
 				state = START_BIT_CHECK;
 				clk_divider_value_to_set = CLK_DIV_NUMBER / 2;
 				set_clk_divider_value = 1;

@@ -6,6 +6,7 @@ Determining compilation order of HDL files
 Analyzing Verilog file "D:/studing/schem3/regfile.v" into library work
 Analyzing Verilog file "D:/studing/schem3/muxers.v" into library work
 Analyzing Verilog file "D:/studing/schem3/memory.v" into library work
+Analyzing Verilog file "D:/studing/schem3/interrupt_handler.v" into library work
 Analyzing Verilog file "D:/studing/schem3/alu_ctrl.v" into library work
 Analyzing Verilog file "D:/studing/schem3/alu.v" into library work
 Analyzing Verilog file "D:/studing/schem3/datapath.v" into library work
@@ -20,6 +21,7 @@ Starting static elaboration
 Completed static elaboration
 Compiling module counter
 Compiling module uart
+Compiling module interrupt_handler
 Compiling module control_unit
 Compiling module memory
 Compiling module regfile
@@ -36,7 +38,7 @@ Compiling module mips_testbench
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 9 sub-compilation(s) to finish...
-Compiled 16 Verilog Units
+Compiled 17 Verilog Units
 Built simulation executable D:/studing/schem3/mips_testbench_isim_beh.exe
-Fuse Memory Usage: 29736 KB
-Fuse CPU Usage: 436 ms
+Fuse Memory Usage: 29824 KB
+Fuse CPU Usage: 421 ms

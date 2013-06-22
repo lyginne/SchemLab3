@@ -99,7 +99,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1371890718" xil_pn:in_ck="-4515422996097881113" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1371890718">
+    <transform xil_pn:end_ts="1371894053" xil_pn:in_ck="-3663099471286265611" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1371894053">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="alu.v"/>
@@ -108,6 +108,7 @@
       <outfile xil_pn:name="counter.v"/>
       <outfile xil_pn:name="cpu_perefery.v"/>
       <outfile xil_pn:name="datapath.v"/>
+      <outfile xil_pn:name="interrupt_handler.v"/>
       <outfile xil_pn:name="memory.v"/>
       <outfile xil_pn:name="mips_cpu.v"/>
       <outfile xil_pn:name="mips_testbench.v"/>
@@ -127,7 +128,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1371890718" xil_pn:in_ck="-4515422996097881113" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1371890718">
+    <transform xil_pn:end_ts="1371894053" xil_pn:in_ck="-3663099471286265611" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1371894053">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="alu.v"/>
@@ -136,6 +137,7 @@
       <outfile xil_pn:name="counter.v"/>
       <outfile xil_pn:name="cpu_perefery.v"/>
       <outfile xil_pn:name="datapath.v"/>
+      <outfile xil_pn:name="interrupt_handler.v"/>
       <outfile xil_pn:name="memory.v"/>
       <outfile xil_pn:name="mips_cpu.v"/>
       <outfile xil_pn:name="mips_testbench.v"/>
@@ -143,7 +145,7 @@
       <outfile xil_pn:name="regfile.v"/>
       <outfile xil_pn:name="uart.v"/>
     </transform>
-    <transform xil_pn:end_ts="1371890724" xil_pn:in_ck="-4515422996097881113" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1009081582007943685" xil_pn:start_ts="1371890718">
+    <transform xil_pn:end_ts="1371894056" xil_pn:in_ck="-3663099471286265611" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1009081582007943685" xil_pn:start_ts="1371894053">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -153,7 +155,7 @@
       <outfile xil_pn:name="mips_testbench_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1371890725" xil_pn:in_ck="-3292259270562856748" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4990574753995760722" xil_pn:start_ts="1371890724">
+    <transform xil_pn:end_ts="1371894056" xil_pn:in_ck="-3292259270562856748" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4990574753995760722" xil_pn:start_ts="1371894056">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
@@ -193,6 +195,7 @@
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="cpu_perefery.lso"/>

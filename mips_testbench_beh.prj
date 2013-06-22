@@ -1,6 +1,7 @@
 verilog work "regfile.v"
 verilog work "muxers.v"
 verilog work "memory.v"
+verilog work "interrupt_handler.v"
 verilog work "alu_ctrl.v"
 verilog work "alu.v"
 verilog work "datapath.v"

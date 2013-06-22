@@ -67,13 +67,21 @@ module control_unit(
    // auxiliary signals
    reg                            memory_op, branch_op, r_type_op, immidiate_op;
 	
-	// interrupt flags
+	// interrupt flags and signals
 	reg 									 int_en;
-	reg 									 int_req, int_req_to_get;
+	wire 									 int_req;
+	reg 									 int_req_handled;
+	
+	interrupt_handler int_handler (
+		.int_sig(int_sig),
+		.int_handled(int_req_handled),
+		.int_request(int_req)
+	);
 	
 	
 	initial begin
       int_en = 1; // interrupts enabled at start  
+		int_req_handled = 0;
    end
    
 
@@ -299,33 +307,17 @@ module control_unit(
           default: nextstate = FETCH;
         endcase
      end // always @ (state or opcode)
-
-
-	always @(posedge int_sig)
-		begin
-			int_req_to_get = 1;
-			#5 int_req_to_get = 0;
-		end
-
    
-   // Control FSM state reg
-   always @(posedge clk, posedge int_req_to_get)
-     begin
-	     if (clk)
-			begin
-			  if (rst) 
-				 state <= FETCH;
-			  else 
-				begin
-					if (state == INTERRUPT)
-						int_req = 0;
-					state <= nextstate;
-				end
-			end
+	// Control FSM state reg
+	always @(posedge clk)
+	begin
+		if (rst) 
+			state <= FETCH;
+		else 
+		begin
+			int_req_handled = state == INTERRUPT;
 			
-			if (int_req_to_get)
-			begin
-				int_req = 1;
-			end
-     end
+			state <= nextstate;
+		end
+	end
 endmodule

@@ -1,13 +1,11 @@
-Release 14.5 ngdbuild P.58f (lin64)
+Release 14.4 ngdbuild P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Command Line: /opt/Xilinx/14.5/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
-ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s700an-fgg484-5
+Command Line: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s700an-fgg484-5
 cpu_perefery.ngc cpu_perefery.ngd
 
-Reading NGO file "/home/nik/SchemLab3/cpu_perefery.ngc" ...
-Loading design module "/home/nik/SchemLab3/cpu_perefery.ngc"...
-WARNING:NgdBuild:578 - Design contains no instances.
+Reading NGO file "D:/studing/schem3/cpu_perefery.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -31,9 +29,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   1
+  Number of warnings:   0
 
-Total memory usage is 394596 kilobytes
+Total memory usage is 172264 kilobytes
 
 Writing NGD file "cpu_perefery.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec

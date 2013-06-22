@@ -1,4 +1,4 @@
-Release 14.5 Map P.58f (lin64)
+Release 14.4 Map P.49d (nt64)
 Xilinx Map Application Log File for Design 'cpu_perefery'
 
 Design Information
@@ -9,17 +9,20 @@ Target Device  : xc3s700an
 Target Package : fgg484
 Target Speed   : -5
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Sat Jun 22 16:22:18 2013
+Mapped Date    : Sat Jun 22 16:42:28 2013
 
 Mapping design into LUTs...
 Running directed packing...
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
-WARNING:PhysDesignRules:367 - The signal <clk_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <rst_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net write_leds is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   cpu/ctrl_inst/int_en_not0001 is sourced by a combinatorial pin. This is not
+   good design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
 
 Design Summary
 --------------
@@ -28,17 +31,33 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    2
 Logic Utilization:
+  Total Number Slice Registers:       1,294 out of  11,776   10%
+    Number used as Flip Flops:        1,291
+    Number used as Latches:               3
+  Number of 4 input LUTs:             4,275 out of  11,776   36%
 Logic Distribution:
-    Number of Slices containing only related logic:       0 out of       0   0%
-    Number of Slices containing unrelated logic:          0 out of       0   0%
+  Number of occupied Slices:          2,692 out of   5,888   45%
+    Number of Slices containing only related logic:   2,692 out of   2,692 100%
+    Number of Slices containing unrelated logic:          0 out of   2,692   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Number of bonded IOBs:                  2 out of     372    1%
+  Total Number of 4 input LUTs:       4,319 out of  11,776   36%
+    Number used as logic:             2,227
+    Number used as a route-thru:         44
+    Number used for 32x1 RAMs:        2,048
+      (Two LUTs used per 32x1 RAM)
 
-Average Fanout of Non-Clock Nets:                0.00
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
 
-Peak Memory Usage:  609 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   3 secs 
+  Number of bonded IOBs:                 11 out of     372    2%
+    IOB Flip Flops:                       8
+  Number of BUFGMUXs:                     1 out of      24    4%
+
+Average Fanout of Non-Clock Nets:                5.36
+
+Peak Memory Usage:  312 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   4 secs 
 
 NOTES:
 

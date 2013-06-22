@@ -1,0 +1,71 @@
+#:C19    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.49d
+#Current Working Directory:
+#:D   D:\studing\schem3
+#Date/Time:
+#:T   Sat Jun 22 16:40:24 2013
+#------------------------------
+	#Reading cpu_perefery.ncd...
+	#Loading device for application Rf_Device from file '3s700a.nph' in environment C:\Xilinx\14.4\ISE_DS\ISE\.
+	#   "cpu_perefery" is an NCD, version 3.2, device xc3s700an, package fgg484, speed -5
+	#Design creation date: 2013.06.22.12.38.35
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+unselect -all
+	#4
+unselect -all
+	#5
+select comp 'cpu/datapath_inst/regfile_inst/rf_12_15'
+	#comp "cpu/datapath_inst/regfile_inst/rf_12_15",  site "SLICE_X6Y60",  type = SLICEL  (RPM grid X33Y62)
+	#6
+unselect -all
+	#7
+select comp 'cpu/datapath_inst/regfile_inst/rf_12_15'
+	#comp "cpu/datapath_inst/regfile_inst/rf_12_15",  site "SLICE_X6Y60",  type = SLICEL  (RPM grid X33Y62)
+	#8
+post block
+	#9
+unselect -all
+	#10
+unselect -all
+	#11
+unselect -all
+	#12
+unselect -all
+	#13
+unselect -all
+	#14
+unselect -all
+	#15
+unselect -all
+	#16
+unselect -all
+	#17
+unselect -all
+	#18
+unselect -all
+	#19
+unselect -all
+	#20
+unselect -all
+	#21
+unselect -all
+	#22
+unselect -all
+	#23
+select rpm 'Shape_2'
+	#RPM Shape_2, type CARRY
+	#24
+unselect -all
+	#25
+select comp 'cpu/datapath_inst/alu_inst/result_addsub0000<18>'
+	#comp "cpu/datapath_inst/alu_inst/result_addsub0000<18>",  site "SLICE_X31Y48",  type = SLICEL  (RPM grid X83Y50)
+	#26
+post block

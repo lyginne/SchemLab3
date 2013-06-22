@@ -25,7 +25,8 @@ module uart(
 		input wire cpu_end_read,
 		input wire [7:0] leds_array,
 		input wire write_leds,
-		input wire clk
+		input wire clk,
+		output wire [7:0] leds_output
 	);
 	 
 	localparam // UART States
@@ -43,6 +44,7 @@ module uart(
 	reg [7:0] bit_counter;
 
 	reg [7:0] leds;
+	assign leds_output = leds;
 	
 	wire [7:0] clk_divider_current_value;
 	reg [7:0] clk_divider_value_to_set;

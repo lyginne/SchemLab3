@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/nik/SchemLab3/cpu_perefery.ncd
-OUTFILE=/home/nik/SchemLab3/cpu_perefery.bit
+INFILE=D:\studing\schem3\cpu_perefery.ncd
+OUTFILE=D:\studing\schem3\cpu_perefery.bit
 FAMILY=Spartan3A and Spartan3AN
 PART=xc3s700an-5fgg484
-WORKINGDIR=/home/nik/SchemLab3
+WORKINGDIR=D:\studing\schem3
 LICENSE=WebPack
-USER_INFO=210768809_0_0_357
+USER_INFO=210743200_0_0_739

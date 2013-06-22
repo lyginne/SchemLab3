@@ -21,7 +21,8 @@
 module cpu_perefery(
 	input wire clk,
    input wire rst,
-	input wire uart_in
+	input wire uart_in,
+	output wire [7:0] led
     );
 	 
 		 wire int0;
@@ -37,7 +38,8 @@ module cpu_perefery(
 		 .uart_to_cpu_buf (uart_to_cpu),
 		 .leds_array (leds_array),
 		 .write_leds (write_leds),
-		 .clk (clk)
+		 .clk (clk),
+		 .leds_output (led)
 	);
 	 
 	  mips_cpu cpu(

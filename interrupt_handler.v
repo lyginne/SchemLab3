@@ -36,7 +36,7 @@ module interrupt_handler(
 		int_request = 0;
 	end
 
-	always @ (posedge int_sig, negedge int_sig, posedge int_handled)
+	always @ (int_sig, int_handled)
 	begin
 		if (int_handled)
 			int_request = 0;

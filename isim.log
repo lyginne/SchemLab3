@@ -12,8 +12,6 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 start sending to uart
-start bit check
 leds = 55
 start sending to uart
-start bit check
 leds = c8

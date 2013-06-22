@@ -48,6 +48,7 @@
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cpu_perefery_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="datapath_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="interrupt_handler_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
@@ -99,7 +100,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1371894053" xil_pn:in_ck="-3663099471286265611" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1371894053">
+    <transform xil_pn:end_ts="1371901369" xil_pn:in_ck="-3663099471286265611" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1371901369">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="alu.v"/>
@@ -116,11 +117,11 @@
       <outfile xil_pn:name="regfile.v"/>
       <outfile xil_pn:name="uart.v"/>
     </transform>
-    <transform xil_pn:end_ts="1371885057" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3161390453345297969" xil_pn:start_ts="1371885057">
+    <transform xil_pn:end_ts="1371901525" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-3161390453345297969" xil_pn:start_ts="1371901525">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1371885057" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8575558275769834185" xil_pn:start_ts="1371885057">
+    <transform xil_pn:end_ts="1371901525" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8575558275769834185" xil_pn:start_ts="1371901525">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -128,7 +129,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1371894053" xil_pn:in_ck="-3663099471286265611" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1371894053">
+    <transform xil_pn:end_ts="1371901369" xil_pn:in_ck="-3663099471286265611" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1371901369">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="alu.v"/>
@@ -145,9 +146,11 @@
       <outfile xil_pn:name="regfile.v"/>
       <outfile xil_pn:name="uart.v"/>
     </transform>
-    <transform xil_pn:end_ts="1371894056" xil_pn:in_ck="-3663099471286265611" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1009081582007943685" xil_pn:start_ts="1371894053">
+    <transform xil_pn:end_ts="1371901528" xil_pn:in_ck="-3663099471286265611" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1009081582007943685" xil_pn:start_ts="1371901525">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
@@ -155,9 +158,11 @@
       <outfile xil_pn:name="mips_testbench_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1371894056" xil_pn:in_ck="-3292259270562856748" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4990574753995760722" xil_pn:start_ts="1371894056">
+    <transform xil_pn:end_ts="1371901529" xil_pn:in_ck="-6130354166780290835" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4990574753995760722" xil_pn:start_ts="1371901528">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="mips_testbench_isim_beh.wdb"/>
@@ -190,13 +195,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1371856165" xil_pn:in_ck="-5927283532228447733" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5762467523750967008" xil_pn:start_ts="1371856138">
+    <transform xil_pn:end_ts="1371901581" xil_pn:in_ck="-2250916884781284583" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5762467523750967008" xil_pn:start_ts="1371901552">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="cpu_perefery.lso"/>
       <outfile xil_pn:name="cpu_perefery.ngc"/>
@@ -214,13 +216,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1371842498" xil_pn:in_ck="-5037168866765510283" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6372997151486033776" xil_pn:start_ts="1371842487">
+    <transform xil_pn:end_ts="1371901624" xil_pn:in_ck="-5037168866765510283" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6372997151486033776" xil_pn:start_ts="1371901614">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="cpu_perefery.bld"/>

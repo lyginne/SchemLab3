@@ -37,8 +37,8 @@ Compiling module cpu_perefery
 Compiling module mips_testbench
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 9 sub-compilation(s) to finish...
+Waiting for 10 sub-compilation(s) to finish...
 Compiled 17 Verilog Units
 Built simulation executable D:/studing/schem3/mips_testbench_isim_beh.exe
-Fuse Memory Usage: 29824 KB
-Fuse CPU Usage: 421 ms
+Fuse Memory Usage: 29828 KB
+Fuse CPU Usage: 405 ms

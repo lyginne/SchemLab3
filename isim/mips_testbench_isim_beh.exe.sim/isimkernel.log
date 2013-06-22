@@ -2,9 +2,9 @@ Command line:
    mips_testbench_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  53201
+     -socket  54487
 
-Sat Jun 22 13:40:58 2013
+Sat Jun 22 15:45:31 2013
 
 
  Elaboration Time: 0.0312 sec
@@ -19,11 +19,11 @@ Sat Jun 22 13:40:58 2013
  Total Processes        : 94
  Total Traceable Variables  : 105
  Total Scalar Nets and Variables : 35853
-Total Line Count : 383
+Total Line Count : 382
 
- Total Simulation Time: 0.0312 sec
+ Total Simulation Time: 0.0624 sec
 
  Current Memory Usage: 508.944 Meg
 
-Sat Jun 22 13:41:04 2013
+Sat Jun 22 15:45:36 2013
 

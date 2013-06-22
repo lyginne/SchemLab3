@@ -1,11 +1,13 @@
-Release 14.5 ngdbuild P.58f (lin64)
+Release 14.4 ngdbuild P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Command Line: /opt/Xilinx/14.5/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
-ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-5 cpu_perefery.ngc
+Command Line: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-5 cpu_perefery.ngc
 cpu_perefery.ngd
 
-Reading NGO file "/home/nik/lab1_git/cpu_perefery.ngc" ...
+Reading NGO file "D:/studing/schem3/cpu_perefery.ngc" ...
+Loading design module "D:\studing\schem3/cpu_perefery.ngc"...
+WARNING:NgdBuild:578 - Design contains no instances.
 Gathering constraint information from source properties...
 Done.
 
@@ -23,6 +25,7 @@ Partition Implementation Status
 -------------------------------
 EXCEPTION:ConstraintSystem:Cs_ConstraintMgrImpl.c:279:1.202 - Unable to open
    project repository file 'xlnx_auto_0_xdb/cst.xbcd'
-FATAL_ERROR:NgdBuild:Port_Main.h:159:1.6 - This application has discovered an
-   exceptional condition from which it cannot recover.  For technical support on
-   this issue, please visit http://www.xilinx.com/support.
+FATAL_ERROR:NgdBuild:Portability/export/Port_Main.h:159:1.6 - This application
+   has discovered an exceptional condition from which it cannot recover. 
+   Process will terminate. For technical support on this issue, please open a
+   WebCase with this project attached at http://www.xilinx.com/support.

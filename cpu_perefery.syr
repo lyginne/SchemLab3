@@ -1,21 +1,18 @@
-Release 14.5 - xst P.58f (lin64)
+Release 14.4 - xst P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
---> 
-Parameter TMPDIR set to xst/projnav.tmp
+--> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
---> 
-Parameter xsthdpdir set to xst
+--> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.09 secs
  
---> 
-Reading design: cpu_perefery.prj
+--> Reading design: cpu_perefery.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -120,8 +117,10 @@ Compiling verilog file "alu.v" in library work
 Module <alu_ctrl> compiled
 Compiling verilog file "datapath.v" in library work
 Module <alu> compiled
-Compiling verilog file "control_unit.v" in library work
+Compiling verilog file "counter.v" in library work
 Module <datapath> compiled
+Compiling verilog file "control_unit.v" in library work
+Module <counter> compiled
 Compiling verilog file "uart.v" in library work
 Module <control_unit> compiled
 Compiling verilog file "mips_cpu.v" in library work
@@ -138,9 +137,18 @@ Analysis of file <"cpu_perefery.prj"> succeeded.
 =========================================================================
 Analyzing hierarchy for module <cpu_perefery> in library <work>.
 
-Analyzing hierarchy for module <uart> in library <work>.
+Analyzing hierarchy for module <uart> in library <work> with parameters.
+	CLK_DIV_NUMBER = "00000000000000000000000001100100"
+	READING = "00000000000000000000000000000010"
+	SINGLE_FRAME_LENGTH = "00000000000000000000000000001000"
+	STAND_BY = "00000000000000000000000000000000"
+	START_BIT_CHECK = "00000000000000000000000000000001"
+	STOP_BIT_CHECK = "00000000000000000000000000000011"
 
 Analyzing hierarchy for module <mips_cpu> in library <work>.
+
+Analyzing hierarchy for module <counter> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000001000"
 
 Analyzing hierarchy for module <control_unit> in library <work> with parameters.
 	ADDI = "001000"
@@ -192,30 +200,17 @@ Analyzing top module <cpu_perefery>.
 Module <cpu_perefery> is correct for synthesis.
  
 Analyzing module <uart> in library <work>.
-"uart.v" line 46: $display : !is_reading
-WARNING:Xst:916 - "uart.v" line 47: Delay is ignored for synthesis.
-WARNING:Xst:916 - "uart.v" line 54: Delay is ignored for synthesis.
-WARNING:Xst:2323 - "uart.v" line 55: Parameter 2 is not constant in call of system task $display.
-"uart.v" line 55: $display : shift_read = %b
-WARNING:Xst:916 - "uart.v" line 54: Delay is ignored for synthesis.
-WARNING:Xst:2323 - "uart.v" line 55: Parameter 2 is not constant in call of system task $display.
-"uart.v" line 55: $display : shift_read = %b
-WARNING:Xst:916 - "uart.v" line 54: Delay is ignored for synthesis.
-WARNING:Xst:2323 - "uart.v" line 55: Parameter 2 is not constant in call of system task $display.
-"uart.v" line 55: $display : shift_read = %b
-WARNING:Xst:916 - "uart.v" line 54: Delay is ignored for synthesis.
-WARNING:Xst:2323 - "uart.v" line 55: Parameter 2 is not constant in call of system task $display.
-"uart.v" line 55: $display : shift_read = %b
-WARNING:Xst:915 - Message (916) is reported only 5 times for each module.
-WARNING:Xst:2323 - "uart.v" line 55: Parameter 2 is not constant in call of system task $display.
-"uart.v" line 55: $display : shift_read = %b
-WARNING:Xst:2323 - "uart.v" line 55: Parameter 2 is not constant in call of system task $display.
-"uart.v" line 55: $display : shift_read = %b
-WARNING:Xst:2323 - "uart.v" line 55: Parameter 2 is not constant in call of system task $display.
-"uart.v" line 55: $display : shift_read = %b
-WARNING:Xst:2323 - "uart.v" line 55: Parameter 2 is not constant in call of system task $display.
-"uart.v" line 55: $display : shift_read = %b
+	CLK_DIV_NUMBER = 32'sb00000000000000000000000001100100
+	READING = 32'sb00000000000000000000000000000010
+	SINGLE_FRAME_LENGTH = 32'sb00000000000000000000000000001000
+	STAND_BY = 32'sb00000000000000000000000000000000
+	START_BIT_CHECK = 32'sb00000000000000000000000000000001
+	STOP_BIT_CHECK = 32'sb00000000000000000000000000000011
 Module <uart> is correct for synthesis.
+ 
+Analyzing module <counter> in library <work>.
+	WIDTH = 32'sb00000000000000000000000000001000
+Module <counter> is correct for synthesis.
  
 Analyzing module <mips_cpu> in library <work>.
 Module <mips_cpu> is correct for synthesis.
@@ -239,16 +234,9 @@ Analyzing module <control_unit> in library <work>.
 	SLTI = 6'b001010
 	SW = 6'b101011
 	XORI = 6'b001110
-WARNING:Xst:2326 - "control_unit.v" line 245: Invalid escape sequence : %x.
-WARNING:Xst:2323 - "control_unit.v" line 245: Parameter 2 is not constant in call of system task $display.
-"control_unit.v" line 245: $display : $uart_read = %x
-WARNING:Xst:2326 - "control_unit.v" line 260: Invalid escape sequence : %x.
-WARNING:Xst:2323 - "control_unit.v" line 260: Parameter 2 is not constant in call of system task $display.
-"control_unit.v" line 260: $display : $leds_write = %x
-"control_unit.v" line 293: $display : interrupt
 WARNING:Xst:905 - "control_unit.v" line 83: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <immidiate_op>, <int_en>, <int_req>, <alu_out>
-WARNING:Xst:916 - "control_unit.v" line 310: Delay is ignored for synthesis.
+WARNING:Xst:916 - "control_unit.v" line 307: Delay is ignored for synthesis.
 Module <control_unit> is correct for synthesis.
  
 Analyzing module <datapath> in library <work>.
@@ -292,25 +280,17 @@ Module <alu> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <is_reading> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <shift_read<7>> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <shift_read<6>> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <shift_read<5>> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <shift_read<4>> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <shift_read<3>> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <shift_read<2>> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <shift_read<1>> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <shift_read<0>> in unit <uart> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <clk_divider_value_to_set> in unit <uart> has a constant value of 00110010 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <int_req> in unit <control_unit> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
-Synthesizing Unit <uart>.
-    Related source file is "uart.v".
-WARNING:Xst:647 - Input <cpu_end_read> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1305 - Output <uart_to_cpu_buf> is never assigned. Tied to value 00000000.
-WARNING:Xst:1305 - Output <read_int> is never assigned. Tied to value 0.
-WARNING:Xst:646 - Signal <shift_read<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <leds> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-Unit <uart> synthesized.
+Synthesizing Unit <counter>.
+    Related source file is "counter.v".
+    Found 8-bit up counter for signal <value>.
+    Found 1-bit register for signal <overflow>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <counter> synthesized.
 
 
 Synthesizing Unit <control_unit>.
@@ -394,6 +374,23 @@ Synthesizing Unit <alu>.
 Unit <alu> synthesized.
 
 
+Synthesizing Unit <uart>.
+    Related source file is "uart.v".
+WARNING:Xst:647 - Input <cpu_end_read> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <leds> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <clk_divider_current_value> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <uart_to_cpu_buf>.
+    Found 1-bit register for signal <read_int>.
+    Found 8-bit up counter for signal <bit_counter>.
+    Found 1-bit register for signal <set_clk_divider_value>.
+    Found 8-bit register for signal <shift_read>.
+    Found 2-bit register for signal <state>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  20 D-type flip-flop(s).
+Unit <uart> synthesized.
+
+
 Synthesizing Unit <datapath>.
     Related source file is "datapath.v".
     Found 32-bit register for signal <a_reg>.
@@ -427,8 +424,13 @@ Macro Statistics
  1024x32-bit single-port RAM                           : 1
 # Adders/Subtractors                                   : 1
  32-bit addsub                                         : 1
-# Registers                                            : 39
+# Counters                                             : 2
+ 8-bit up counter                                      : 2
+# Registers                                            : 52
+ 1-bit register                                        : 11
+ 2-bit register                                        : 1
  32-bit register                                       : 39
+ 8-bit register                                        : 1
 # Latches                                              : 1
  3-bit latch                                           : 1
 # Comparators                                          : 1
@@ -476,8 +478,10 @@ Macro Statistics
  1024x32-bit single-port distributed RAM               : 1
 # Adders/Subtractors                                   : 1
  32-bit addsub                                         : 1
-# Registers                                            : 1248
- Flip-Flops                                            : 1248
+# Counters                                             : 2
+ 8-bit up counter                                      : 2
+# Registers                                            : 1269
+ Flip-Flops                                            : 1269
 # Latches                                              : 1
  3-bit latch                                           : 1
 # Comparators                                          : 1
@@ -507,10 +511,49 @@ Optimizing unit <alu> ...
 
 Optimizing unit <control_unit> ...
 
+Optimizing unit <uart> ...
+
 Optimizing unit <datapath> ...
 WARNING:Xst:2677 - Node <cpu/ctrl_inst/state_2> of sequential type is unconnected in block <cpu_perefery>.
 WARNING:Xst:2677 - Node <cpu/ctrl_inst/state_1> of sequential type is unconnected in block <cpu_perefery>.
 WARNING:Xst:2677 - Node <cpu/ctrl_inst/state_0> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/clk_divider/value_7> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/clk_divider/value_6> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/clk_divider/value_4> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/clk_divider/value_3> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/clk_divider/value_5> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/clk_divider/value_1> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/clk_divider/value_0> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/clk_divider/value_2> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/bit_counter_7> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/bit_counter_6> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/bit_counter_5> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/bit_counter_4> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/bit_counter_3> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/bit_counter_2> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/bit_counter_1> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/bit_counter_0> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/clk_divider/overflow> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/uart_to_cpu_buf_7> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/uart_to_cpu_buf_6> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/uart_to_cpu_buf_5> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/uart_to_cpu_buf_4> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/uart_to_cpu_buf_3> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/uart_to_cpu_buf_2> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/uart_to_cpu_buf_1> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/uart_to_cpu_buf_0> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/shift_read_0> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/shift_read_1> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/shift_read_2> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/shift_read_3> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/shift_read_4> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/read_int> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/shift_read_5> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/state_1> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/state_0> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/shift_read_6> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/shift_read_7> of sequential type is unconnected in block <cpu_perefery>.
+WARNING:Xst:2677 - Node <myuart/set_clk_divider_value> of sequential type is unconnected in block <cpu_perefery>.
 WARNING:Xst:2677 - Node <cpu/datapath_inst/regfile_inst/rf_2_0> of sequential type is unconnected in block <cpu_perefery>.
 WARNING:Xst:2677 - Node <cpu/datapath_inst/regfile_inst/rf_2_1> of sequential type is unconnected in block <cpu_perefery>.
 WARNING:Xst:2677 - Node <cpu/datapath_inst/regfile_inst/rf_2_2> of sequential type is unconnected in block <cpu_perefery>.
@@ -2872,15 +2915,14 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 
 
-Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 19.29 secs
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 24.44 secs
  
 --> 
 
-
-Total memory usage is 572480 kilobytes
+Total memory usage is 319308 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 2310 (   0 filtered)
-Number of infos    :   17 (   0 filtered)
+Number of warnings : 2328 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
 

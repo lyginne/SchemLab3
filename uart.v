@@ -19,76 +19,125 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module uart(
-		 input wire uart_in,
-		 output reg[7:0] uart_to_cpu_buf,
-		 output reg read_int,
-		 input wire cpu_end_read,
-		 input wire [7:0] leds_array,
-		 input wire write_leds
-    );
+		input wire uart_in,
+		output reg[7:0] uart_to_cpu_buf,
+		output reg read_int,
+		input wire cpu_end_read,
+		input wire [7:0] leds_array,
+		input wire write_leds,
+		input wire clk
+	);
 	 
-	 reg is_reading;
-	 //reg has_byte_to_read;
+	localparam // UART States
+		STAND_BY = 0,
+		START_BIT_CHECK = 1,
+		READING = 2,
+		STOP_BIT_CHECK = 3;
+
+	localparam CLK_DIV_NUMBER = 8'd10;
+	
+	localparam SINGLE_FRAME_LENGTH = 8;
+
+	reg [1:0] state;
+	reg [7:0] shift_read;
+	reg [7:0] bit_counter;
+
+	reg [7:0] leds;
+	
+	wire [7:0] clk_divider_current_value;
+	reg [7:0] clk_divider_value_to_set;
+	reg set_clk_divider_value;
+	wire clk_divider_overflow;
+
+	counter #(.WIDTH(8)) clk_divider (
+		.inc(clk),
+		.max(CLK_DIV_NUMBER - 8'b1),
+		.value_to_set(clk_divider_value_to_set),
+		.value(clk_divider_current_value),
+		.set_value(set_clk_divider_value),
+		.overflow(clk_divider_overflow)
+	);
 	 
-	 reg [7:0] shift_read;
+	initial
+	begin
+		uart_to_cpu_buf = 8'b0;
+		read_int = 0;
+		state = STAND_BY;
+		bit_counter = 8'b0;
+		shift_read = 8'b0;
+		leds = 8'b0;
+		set_clk_divider_value = 0;
+		clk_divider_value_to_set = 8'b0;
+	end
+		 
+	always @(posedge clk)
+	begin
+		if (state == STAND_BY)
+		begin
+			if (!uart_in)
+			begin
+				$display("start bit check");
+				state = START_BIT_CHECK;
+				clk_divider_value_to_set = CLK_DIV_NUMBER / 2;
+				set_clk_divider_value = 1;
+			end
+		end
+		else
+			set_clk_divider_value = 0;
+		
+		if (clk_divider_overflow)
+		begin
+			if (state == START_BIT_CHECK)
+			begin
+				if (!uart_in)
+				begin
+					state = READING;
+					bit_counter = 0;
+				end
+				else
+					state = STAND_BY;
+			end
+			else if (state == READING)
+			begin
+				shift_read = shift_read >> 1;
+				shift_read[7] = uart_in;
+				if (bit_counter == SINGLE_FRAME_LENGTH - 1)
+				begin
+					state = STOP_BIT_CHECK;
+				end
+				else
+					bit_counter = bit_counter + 1;
+			end
+			else if (state == STOP_BIT_CHECK)
+			begin
+				if (uart_in == 1)
+				begin
+					uart_to_cpu_buf = shift_read;
+					read_int = 1;
+				end
+				state = STAND_BY;
+				end
+			end
+		else
+		begin
+			read_int = 0;
+		end
+	end
+
+	/*always @(posedge cpu_end_read)
+	begin
+		if (has_byte_to_read) // copy another byte if has one
+		begin	
+			uart_to_cpu_buf = shift_read;
+			has_byte_to_read = 0;
+			read_int = 1;
+			#10 read_int = 0;
+		end
+	end*/
 	 
-	 reg [7:0] leds;
-	 
-	 initial
-	 begin
-		is_reading = 0;
-	 end
-	 
-	 always @(negedge uart_in)
-	 begin
-		  if (!is_reading) // then it's a start bit
-		  begin
-			$display("!is_reading");
-			  #5 if (uart_in == 0) // check if still 0 after half-interval
-			  begin
-					is_reading = 1;
-					
-					repeat (8) // read 8 bits
-					 begin
-						 shift_read = shift_read >> 1;
-						 #10 shift_read[7] = uart_in;
-						 $display("shift_read = %b",uart.shift_read);
-					 end
-					
-					#10 if (uart_in == 1) // check stop bit
-					begin 
-						//if (!is_reading) // if not waiting for cpu to read
-						//begin // then copy shift reg to buffer and set flag for cpu
-							 $display("will copy byte to buf");
-							 uart_to_cpu_buf = shift_read;
-							 //has_byte_to_read = 0;
-							 read_int = 0;
-							 #1 read_int = 1;
-							 #50 read_int = 0;
-						//end
-						//else // otherwise set flag to copy recieved byte after read
-						//	has_byte_to_read = 1;
-					end
-					
-					is_reading = 0;
-			  end
-		  end
-	 end
-	 
-	 /*always @(posedge cpu_end_read)
-	 begin
-		  if (has_byte_to_read) // copy another byte if has one
-		  begin	
-				uart_to_cpu_buf = shift_read;
-				has_byte_to_read = 0;
-				read_int = 1;
-				#10 read_int = 0;
-		  end
-	 end*/
-	 
-	 always @(posedge write_leds)
-	 begin
-		  leds = leds_array;
-	 end
+	always @(posedge write_leds)
+	begin
+		leds = leds_array;
+	end
 
 endmodule

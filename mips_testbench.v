@@ -21,7 +21,7 @@ module mips_testbench();
 
       rst = 0;
 
-      repeat (20000)				
+      repeat (200000)				
 			@(posedge clk);
 				
 					
@@ -47,24 +47,23 @@ module mips_testbench();
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in); 
 		#500 uart_in = 0;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
-		#10 uart_in =1;
+		#200 uart_in =1;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
-		#10 uart_in =0;
+		#200 uart_in =0;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
-		#10 uart_in =1;
+		#200 uart_in =1;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
-		#10 uart_in =0;
+		#200 uart_in =0;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
-		#10 uart_in =1;
+		#200 uart_in =1;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
-		#10 uart_in =0;
+		#200 uart_in =0;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
-		#10 uart_in =1;
+		#200 uart_in =1;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
-		#10 uart_in =0;
+		#200 uart_in =0;
 		$display("$uart_in = %b",dat_cpu.myuart.uart_in);
-		#10 uart_in =1;
-		#1000 $display("$leds = %b",dat_cpu.myuart.leds);
+		#200 uart_in =1;
 		
    end
    

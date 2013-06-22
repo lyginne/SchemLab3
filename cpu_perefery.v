@@ -36,7 +36,8 @@ module cpu_perefery(
 		 .cpu_end_read (cpu_end_read),
 		 .uart_to_cpu_buf (uart_to_cpu),
 		 .leds_array (leds_array),
-		 .write_leds (write_leds)
+		 .write_leds (write_leds),
+		 .clk (clk)
 	);
 	 
 	  mips_cpu cpu(

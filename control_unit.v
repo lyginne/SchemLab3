@@ -242,7 +242,6 @@ module control_unit(
                 if (opcode == LW)
                   begin
                      nextstate = MEM_READ_COMPLETION;
-							$display("$uart_read = %x",alu_out);
 							if (alu_out == {32'h204}) 
 							
 // 32'h70 - uart map address
@@ -257,7 +256,6 @@ module control_unit(
                   end
                 else begin // opcode == SW
                    nextstate = FETCH;
-						 $display("$leds_write = %x",alu_out);
 						 if (alu_out == 32'h1ec)
 								begin						 // 32'h78 - leds map address
 							 
@@ -290,7 +288,6 @@ module control_unit(
           end
 			 
 			 INTERRUPT: begin
-				$display("interrupt");
 				 nextstate     = FETCH;
 				 
 				 pc_source 		= 'b11; // write interrupt vector address

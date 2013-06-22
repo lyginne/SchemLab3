@@ -1,6 +1,6 @@
 ISim log file
-Running: D:\studing\schem3\mips_testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/studing/schem3/mips_testbench_isim_beh.wdb 
-ISim P.49d (signature 0x7708f090)
+Running: /home/nik/SchemLab3/mips_testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/nik/SchemLab3/mips_testbench_isim_beh.wdb 
+ISim P.58f (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
@@ -15,3 +15,4 @@ start sending to uart
 leds = 55
 start sending to uart
 leds = c8
+# exit 0

@@ -1,24 +1,27 @@
-Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/studing/schem3/mips_testbench_isim_beh.exe -prj D:/studing/schem3/mips_testbench_beh.prj work.mips_testbench work.glbl 
-ISim P.49d (signature 0x7708f090)
+Running: /opt/Xilinx/14.5/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/nik/SchemLab3/mips_testbench_isim_beh.exe -prj /home/nik/SchemLab3/mips_testbench_beh.prj work.mips_testbench work.glbl 
+ISim P.58f (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "D:/studing/schem3/regfile.v" into library work
-Analyzing Verilog file "D:/studing/schem3/muxers.v" into library work
-Analyzing Verilog file "D:/studing/schem3/memory.v" into library work
-Analyzing Verilog file "D:/studing/schem3/interrupt_handler.v" into library work
-Analyzing Verilog file "D:/studing/schem3/alu_ctrl.v" into library work
-Analyzing Verilog file "D:/studing/schem3/alu.v" into library work
-Analyzing Verilog file "D:/studing/schem3/datapath.v" into library work
-Analyzing Verilog file "D:/studing/schem3/counter.v" into library work
-Analyzing Verilog file "D:/studing/schem3/control_unit.v" into library work
-Analyzing Verilog file "D:/studing/schem3/uart.v" into library work
-Analyzing Verilog file "D:/studing/schem3/mips_cpu.v" into library work
-Analyzing Verilog file "D:/studing/schem3/cpu_perefery.v" into library work
-Analyzing Verilog file "D:/studing/schem3/mips_testbench.v" into library work
-Analyzing Verilog file "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/regfile.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/muxers.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/memory.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/interrupt_handler.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/alu_ctrl.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/alu.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/datapath.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/counter.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/control_unit.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/uart.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/mips_cpu.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/cpu_perefery.v" into library work
+Analyzing Verilog file "/home/nik/SchemLab3/mips_testbench.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:1016 - "/home/nik/SchemLab3/mips_testbench.v" Line 7: Port led is not connected to this instance
 Completed static elaboration
+Fuse Memory Usage: 95800 KB
+Fuse CPU Usage: 1540 ms
 Compiling module counter
 Compiling module uart
 Compiling module interrupt_handler
@@ -39,6 +42,7 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 10 sub-compilation(s) to finish...
 Compiled 17 Verilog Units
-Built simulation executable D:/studing/schem3/mips_testbench_isim_beh.exe
-Fuse Memory Usage: 29828 KB
-Fuse CPU Usage: 405 ms
+Built simulation executable /home/nik/SchemLab3/mips_testbench_isim_beh.exe
+Fuse Memory Usage: 656232 KB
+Fuse CPU Usage: 1610 ms
+GCC CPU Usage: 1760 ms

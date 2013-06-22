@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.5 (64-bit)
+# Build 247527 by xbuild on Mon Mar 25 17:11:23 MDT 2013
+# Start of session at: Sat Jun 22 17:03:23 2013
+# Process ID: 6888
+# Log file: /home/nik/SchemLab3/planAhead_run_1/planAhead.log
+# Journal file: /home/nik/SchemLab3/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/nik/SchemLab3/pa.fromHdl.tcl
+update_compile_order -fileset sim_1

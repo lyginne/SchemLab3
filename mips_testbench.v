@@ -4,7 +4,7 @@ module mips_testbench();
    reg rst;
 	reg uart_in;
    
-   cpu_perefery dat_cpu ( .clk(clk), .rst(rst), .uart_in(uart_in) );
+*   cpu_perefery dat_cpu ( .clk(clk), .rst(rst), .uart_in(uart_in) );
 
    initial begin
       clk = 0;

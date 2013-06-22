@@ -1,7 +1,7 @@
 Release 14.5 par P.58f (lin64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Laptop::  Sat Jun 22 16:57:10 2013
+Laptop::  Sat Jun 22 17:14:34 2013
 
 par -w -intstyle ise -ol high -t 1 cpu_perefery_map.ncd cpu_perefery.ncd
 cpu_perefery.pcf 
@@ -81,7 +81,7 @@ Phase 7.8  Global Placement
 ............................................................................
 .....................
 .......................
-Phase 7.8  Global Placement (Checksum:67007e25) REAL time: 15 secs 
+Phase 7.8  Global Placement (Checksum:67007e25) REAL time: 16 secs 
 
 Phase 8.5  Local Placement Optimization
 Phase 8.5  Local Placement Optimization (Checksum:67007e25) REAL time: 16 secs 
@@ -109,20 +109,20 @@ Phase  3  : 4141 unrouted;      REAL time: 52 secs
 
 Phase  4  : 4141 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 53 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 2 secs 
 
 Updating file: cpu_perefery.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 8 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 7 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 9 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 8 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 11 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 10 secs 
 WARNING:Route:455 - CLK Net:cpu/ctrl_inst/int_req_handled may have excessive skew because 
       1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 1 mins 11 secs 
-Total CPU time to Router completion: 1 mins 11 secs 
+Total REAL time to Router completion: 1 mins 10 secs 
+Total CPU time to Router completion: 1 mins 10 secs 
 
 Partition Implementation Status
 -------------------------------

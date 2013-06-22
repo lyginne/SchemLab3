@@ -1,4 +1,4 @@
-Release 14.4 Map P.49d (nt64)
+Release 14.5 Map P.58f (lin64)
 Xilinx Mapping Report File for Design 'cpu_perefery'
 
 Design Information
@@ -9,7 +9,7 @@ Target Device  : xc3s700an
 Target Package : fgg484
 Target Speed   : -5
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Sat Jun 22 16:42:28 2013
+Mapped Date    : Sat Jun 22 16:56:59 2013
 
 Design Summary
 --------------
@@ -40,9 +40,9 @@ Logic Distribution:
 
 Average Fanout of Non-Clock Nets:                5.36
 
-Peak Memory Usage:  312 MB
-Total REAL time to MAP completion:  4 secs 
-Total CPU time to MAP completion:   4 secs 
+Peak Memory Usage:  641 MB
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   8 secs 
 
 NOTES:
 
@@ -132,7 +132,7 @@ Section 6 - IOB Properties
 | led<6>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
 | led<7>                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW    | OFF1         |          | 0 / 0    | 3STATE           |
 | rst                                | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
-| uart_in                            | IBUF             | INPUT     | LVCMOS25             |       |          |         |              |          | 0 / 0    |                  |
+| uart_in                            | IBUF             | INPUT     | LVCMOS33             |       |          |         |              |          | 0 / 0    |                  |
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

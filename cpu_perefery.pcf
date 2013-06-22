@@ -1,10 +1,11 @@
 //! **************************************************************************
-// Written by: Map P.49d on Sat Jun 22 16:42:32 2013
+// Written by: Map P.58f on Sat Jun 22 16:57:06 2013
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "E12" LEVEL 1;
 COMP "rst" LOCATE = SITE "V13" LEVEL 1;
+COMP "uart_in" LOCATE = SITE "F16" LEVEL 1;
 COMP "led<0>" LOCATE = SITE "R20" LEVEL 1;
 COMP "led<1>" LOCATE = SITE "T19" LEVEL 1;
 COMP "led<2>" LOCATE = SITE "U20" LEVEL 1;

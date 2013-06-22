@@ -1,64 +1,7 @@
-vhdtdtfi -lang verilog -prj SchemLab1 -o /home/nik/lab1_git/cpu_perefery.tfi -lib work /home/nik/lab1_git//cpu_perefery.v -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/tfi.tft -deleteonerror 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-xst -intstyle ise -ifn "/home/nik/lab1_git/cpu_perefery.xst" -ofn "/home/nik/lab1_git/cpu_perefery.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-5 cpu_perefery.ngc cpu_perefery.ngd  
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-xst -intstyle ise -ifn "/home/nik/lab1_git/cpu_perefery.xst" -ofn "/home/nik/lab1_git/cpu_perefery.syr" 
-xst -intstyle ise -ifn "/home/nik/lab1_git/cpu_perefery.xst" -ofn "/home/nik/lab1_git/cpu_perefery.syr" 
-xst -intstyle ise -ifn "/home/nik/lab1_git/cpu_perefery.xst" -ofn "/home/nik/lab1_git/cpu_perefery.syr" 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-vhdtdtfi -lib work /home/nik/lab1_git/cpu_perefery.v -lang verilog -prj SchemLab1 -o cpu_perefery.spl -module cpu_perefery -template /opt/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3a cpu_perefery.spl /home/nik/lab1_git/cpu_perefery.sym 
-xst -intstyle ise -ifn "/home/nik/lab1_git/cpu_perefery.xst" -ofn "/home/nik/lab1_git/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem2/cpu_perefery.xst" -ofn "D:/studing/schem2/cpu_perefery.syr" 
 xst -intstyle ise -ifn "/home/nik/SchemLab3/cpu_perefery.xst" -ofn "/home/nik/SchemLab3/cpu_perefery.syr" 
 xst -intstyle ise -ifn "/home/nik/SchemLab3/cpu_perefery.xst" -ofn "/home/nik/SchemLab3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "/home/nik/SchemLab3/cpu_perefery.xst" -ofn "/home/nik/SchemLab3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "/home/nik/SchemLab3/cpu_perefery.xst" -ofn "/home/nik/SchemLab3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem3/cpu_perefery.xst" -ofn "D:/studing/schem3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem3/cpu_perefery.xst" -ofn "D:/studing/schem3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem3/cpu_perefery.xst" -ofn "D:/studing/schem3/cpu_perefery.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-5 cpu_perefery.ngc cpu_perefery.ngd  
-xst -intstyle ise -ifn "D:/studing/schem3/cpu_perefery.xst" -ofn "D:/studing/schem3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem3/cpu_perefery.xst" -ofn "D:/studing/schem3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem3/cpu_perefery.xst" -ofn "D:/studing/schem3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem3/cpu_perefery.xst" -ofn "D:/studing/schem3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem3/cpu_perefery.xst" -ofn "D:/studing/schem3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem3/cpu_perefery.xst" -ofn "D:/studing/schem3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem3/cpu_perefery.xst" -ofn "D:/studing/schem3/cpu_perefery.syr" 
-xst -intstyle ise -ifn "D:/studing/schem3/cpu_perefery.xst" -ofn "D:/studing/schem3/cpu_perefery.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s700an-fgg484-5 cpu_perefery.ngc cpu_perefery.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc constraints.ucf -p xc3s700an-fgg484-5 cpu_perefery.ngc cpu_perefery.ngd  
+map -intstyle ise -p xc3s700an-fgg484-5 -cm area -ir off -pr off -c 100 -o cpu_perefery_map.ncd cpu_perefery.ngd cpu_perefery.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_perefery_map.ncd cpu_perefery.ncd cpu_perefery.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml cpu_perefery.twx cpu_perefery.ncd -o cpu_perefery.twr cpu_perefery.pcf -ucf constraints.ucf 
+bitgen -intstyle ise -f cpu_perefery.ut cpu_perefery.ncd 

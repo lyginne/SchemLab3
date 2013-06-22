@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/nik/SchemLab3/impact.xsl
+OUTFILE=/home/nik/SchemLab3/impact.xsl
+FAMILY=None
+PART=None
+WORKINGDIR=/home/nik/SchemLab3
+LICENSE=iMPACT
+USER_INFO=iMPACT

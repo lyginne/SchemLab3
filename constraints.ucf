@@ -1,0 +1,29 @@
+# clock = CLK_50MHZ
+NET "clk" LOC = "E12"| IOSTANDARD = LVCMOS33 ;
+# define clock period for 50 MHz oscillator with a 40% duty cycle
+NET "clk" PERIOD = 20.0ns HIGH 40%;
+
+# reset = FPGA_INIT_B (0 - lit=restart, 1 - unlit=working)
+NET "rst" LOC = "V13" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+
+# buttons
+#NET "btn_north" 	LOC = "T14" | IOSTANDARD = LVCMOS33 | PULLDOWN ;
+#NET "btn_east" 	LOC = "T16" | IOSTANDARD = LVCMOS33 | PULLDOWN ;
+#NET "btn_south" 	LOC = "T15" | IOSTANDARD = LVCMOS33 | PULLDOWN ;
+#NET "btn_west" 	LOC = "U15" | IOSTANDARD = LVCMOS33 | PULLDOWN ;
+
+# switches = SW[3:0]
+#NET "sw<0>" LOC = "V8" | IOSTANDARD = LVCMOS33 ;
+#NET "sw<1>" LOC = "U10"| IOSTANDARD = LVCMOS33 ;
+#NET "sw<2>" LOC = "U8" | IOSTANDARD = LVCMOS33 ;
+#NET "sw<3>" LOC = "T9" | IOSTANDARD = LVCMOS33 ;
+
+#leds
+#NET "led<7>" LOC = "W21" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+#NET "led<6>" LOC = "Y22" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+#NET "led<5>" LOC = "V20" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+#NET "led<4>" LOC = "V19" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+#NET "led<3>" LOC = "U19" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+#NET "led<2>" LOC = "U20" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+#NET "led<1>" LOC = "T19" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+#NET "led<0>" LOC = "R20" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;

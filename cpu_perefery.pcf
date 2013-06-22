@@ -1,0 +1,10 @@
+//! **************************************************************************
+// Written by: Map P.58f on Sat Jun 22 16:22:23 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "E12" LEVEL 1;
+COMP "rst" LOCATE = SITE "V13" LEVEL 1;
+NET "clk_IBUF" PERIOD = 20 ns HIGH 40%;
+SCHEMATIC END;
+
